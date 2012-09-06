@@ -1,0 +1,5249 @@
+{
+  "0":{
+    "config":{
+      "audiofile-channels":0,
+      "audiofile-file":"",
+      "audiofile-format":{
+        "float32":"float32",
+        "s16_le":"s16_le",
+        "u16_be":"u16_be",
+        "u16_le":"u16_le",
+        "s16":"s16",
+        "u8":"u8",
+        "s8":"s8",
+        "spdif":"spdif",
+        "fixed32":"fixed32",
+        "u16":"u16",
+        "s16_be":"s16_be"
+      },
+      "audiofile-wav":true
+    },
+    "name":"File",
+    "longtext":"File audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "158":{
+    "config":[],
+    "name":"yuy2_i420",
+    "category":"Stream output",
+    "longtext":"Conversions from YUY2,YUNV,YVYU,UYVY,UYNV,Y422,cyuv to I420",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "190":{
+    "config":[],
+    "name":"stream_filter_rar",
+    "category":"Stream output",
+    "longtext":"Uncompressed RAR",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "222":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"Dummy ifo demux",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "1":{
+    "config":[],
+    "name":"Audio memory",
+    "longtext":"Audio memory output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "316":{
+    "config":[],
+    "name":"flac",
+    "category":"Stream output",
+    "longtext":"Flac audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "380":{
+    "config":[],
+    "name":"mux_ogg",
+    "category":"Advanced",
+    "longtext":"Ogg/OGM muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "2":{
+    "config":{
+      "jack-connect-regex":"system",
+      "jack-auto-connect":true
+    },
+    "name":"JACK",
+    "longtext":"JACK audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "3":{
+    "config":{
+      "alsa-audio-device":{
+        "S/PDIF":"iec958",
+        "Surround 5.0":"plug:surround50",
+        "Side speakers":"plug:side",
+        "Front speakers":"plug:front",
+        "Rear speakers":"plug:rear",
+        "Surround 7.1":"plug:surround71",
+        "Default":"default",
+        "HDMI":"hdmi",
+        "Surround 4.1":"plug:surround41",
+        "Surround 4.0":"plug:surround40",
+        "Surround 5.1":"plug:surround51",
+        "Center and subwoofer":"plug:center_lfe"
+      }
+    },
+    "name":"ALSA",
+    "longtext":"ALSA audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "4":{
+    "config":{
+      "portaudio-audio-device":0
+    },
+    "name":"PortAudio",
+    "longtext":"PORTAUDIO audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "5":{
+    "config":[],
+    "name":"Dummy",
+    "longtext":"Dummy audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "6":{
+    "config":[],
+    "name":"PulseAudio",
+    "longtext":"Pulseaudio audio output",
+    "capability":"audio output",
+    "subcategory":"Output modules"
+  },
+  "7":{
+    "config":{
+      "packetizer-mpegvideo-sync-iframe":false
+    },
+    "name":"MPEG Video",
+    "longtext":"MPEG-I/II video packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "8":{
+    "config":[],
+    "name":"packetizer_copy",
+    "longtext":"Copy packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "10":{
+    "config":[],
+    "name":"packetizer_vc1",
+    "longtext":"VC-1 packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "12":{
+    "config":[],
+    "name":"packetizer_flac",
+    "longtext":"Flac audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "14":{
+    "config":[],
+    "name":"packetizer_mpeg4audio",
+    "longtext":"MPEG4 audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "16":{
+    "config":{
+      "audiobargraph_a-port":12345,
+      "audiobargraph_a-address":"localhost",
+      "audiobargraph_a-bargraph_repetition":4,
+      "audiobargraph_a-bargraph":1,
+      "audiobargraph_a-alarm_threshold":0.10000000149012,
+      "audiobargraph_a-repetition_time":2000,
+      "audiobargraph_a-silence":1,
+      "audiobargraph_a-connection_reset":1,
+      "audiobargraph_a-time_window":5000
+    },
+    "name":"Audiobar Graph",
+    "longtext":"Audio part of the BarGraph function",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "20":{
+    "config":[],
+    "name":"Karaoke",
+    "longtext":"Simple Karaoke filter",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "24":{
+    "config":[],
+    "name":"audio_format",
+    "longtext":"Audio filter for PCM format conversion",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "28":{
+    "config":{
+      "param-eq-highf":10000,
+      "param-eq-q2":3,
+      "param-eq-gain2":0,
+      "param-eq-f3":3000,
+      "param-eq-highgain":0,
+      "param-eq-q3":3,
+      "param-eq-gain3":0,
+      "param-eq-gain1":0,
+      "param-eq-lowf":100,
+      "param-eq-f1":300,
+      "param-eq-lowgain":0,
+      "param-eq-q1":3,
+      "param-eq-f2":1000
+    },
+    "name":"Parametric Equalizer",
+    "longtext":"Parametric Equalizer",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "32":{
+    "config":{
+      "scaletempo-overlap":0.20000000298023,
+      "scaletempo-stride":30,
+      "scaletempo-search":14
+    },
+    "name":"Scaletempo",
+    "longtext":"Audio tempo scaler synched with rate",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "40":{
+    "config":[],
+    "name":"Screen capture",
+    "longtext":"Screen capture",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "48":{
+    "config":[],
+    "name":"Video capture",
+    "category":"Playlist",
+    "longtext":"Video capture (Video4Linux)",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "56":{
+    "config":[],
+    "name":"Picture",
+    "category":"Playlist",
+    "longtext":"My Pictures",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "64":{
+    "config":{
+      "xvideo-format-id":0,
+      "xvideo-adaptor":-1
+    },
+    "name":"XVideo",
+    "category":"Playlist",
+    "longtext":"XVideo output (XCB)",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "80":{
+    "config":{
+      "sout-raop-password-file":"",
+      "sout-raop-volume":100,
+      "sout-raop-host":""
+    },
+    "name":"RAOP",
+    "category":"Subtitles codecs",
+    "longtext":"Remote Audio Output Protocol stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "96":{
+    "config":[],
+    "name":"stream_out_dummy",
+    "category":"Stream output",
+    "longtext":"Dummy stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "112":{
+    "config":{
+      "alphamask-mask":""
+    },
+    "name":"Alpha mask",
+    "category":"Stream output",
+    "longtext":"Alpha mask video filter",
+    "help":"Use an image's alpha channel as a transparency mask.",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "128":{
+    "config":{
+      "hue":0,
+      "saturation":1,
+      "contrast":1,
+      "brightness":1,
+      "gamma":1,
+      "brightness-threshold":false
+    },
+    "name":"Image adjust",
+    "category":"Stream output",
+    "longtext":"Image properties filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "160":{
+    "config":[],
+    "name":"rv32",
+    "category":"Stream output",
+    "longtext":"RV32 conversion filter",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "192":{
+    "config":{
+      "jack-input-auto-connect":false,
+      "jack-input-use-vlc-pace":false
+    },
+    "name":"JACK Input",
+    "category":"Stream output",
+    "longtext":"JACK audio input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "224":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"QuickTime Media Link importer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "256":{
+    "config":{
+      "ts-dump-size":16384,
+      "ts-dump-file":"",
+      "ts-es-id-pid":true,
+      "ts-split-es":true,
+      "ts-dump-append":false,
+      "ts-seek-percent":false,
+      "ts-silent":false,
+      "ts-csa-pkt":188,
+      "ts-out-mtu":1400
+    },
+    "name":"MPEG-TS",
+    "category":"Stream output",
+    "longtext":"MPEG Transport Stream demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "320":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dump decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "384":{
+    "config":[],
+    "name":"MPJPEG",
+    "category":"Advanced",
+    "longtext":"Multipart JPEG muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "257":{
+    "config":{
+      "rawaud-fourcc":"s16l",
+      "rawaud-lang":"eng",
+      "rawaud-channels":2,
+      "rawaud-samplerate":48000
+    },
+    "name":"Raw Audio",
+    "category":"Stream output",
+    "longtext":"Raw audio demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "321":{
+    "config":[],
+    "name":"lpcm",
+    "category":"Stream output",
+    "longtext":"Linear PCM audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "385":{
+    "config":{
+      "sout-asf-packet-size":4096,
+      "sout-asf-rating":"",
+      "sout-asf-title":"",
+      "sout-asf-bitrate-override":0,
+      "sout-asf-comment":"",
+      "sout-asf-copyright":"",
+      "sout-asf-author":""
+    },
+    "name":"ASF",
+    "category":"Advanced",
+    "longtext":"ASF muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "129":{
+    "config":{
+      "sharpen-sigma":0.050000000745058
+    },
+    "name":"Sharpen",
+    "category":"Stream output",
+    "longtext":"Sharpen video filter",
+    "help":"Augment contrast between contours.",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "161":{
+    "config":[],
+    "name":"yuy2_i422",
+    "category":"Stream output",
+    "longtext":"Conversions from YUY2,YUNV,YVYU,UYVY,UYNV,Y422,cyuv to I422",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "193":{
+    "config":[],
+    "name":"access_rar",
+    "category":"Stream output",
+    "longtext":"Uncompressed RAR",
+    "capability":"access",
+    "subcategory":"Stream filters"
+  },
+  "225":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"Kasenna MediaBase parser",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "258":{
+    "config":[],
+    "name":"demux_cdg",
+    "category":"Stream output",
+    "longtext":"CDG demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "322":{
+    "config":[],
+    "name":"lpcm",
+    "category":"Stream output",
+    "longtext":"Linear PCM audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "386":{
+    "config":{
+      "sout-ps-pes-max-size":65500,
+      "sout-ps-dts-delay":200
+    },
+    "name":"MPEG-PS",
+    "category":"Advanced",
+    "longtext":"PS muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "65":{
+    "config":[],
+    "name":"GLX",
+    "category":"Playlist",
+    "longtext":"OpenGL GLX video output (XCB)",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "81":{
+    "config":{
+      "sout-delay-id":0,
+      "sout-delay-delay":0
+    },
+    "name":"Delay",
+    "category":"Subtitles codecs",
+    "longtext":"Delay a stream",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "97":{
+    "config":{
+      "sout-es-access-audio":"",
+      "sout-es-dst-video":"",
+      "sout-es-access-video":"",
+      "sout-es-mux-audio":"",
+      "sout-es-dst-audio":"",
+      "sout-es-access":"",
+      "sout-es-mux-video":"",
+      "sout-es-dst":"",
+      "sout-es-mux":""
+    },
+    "name":"ES",
+    "category":"Stream output",
+    "longtext":"Elementary stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "113":{
+    "config":[],
+    "name":"yuvp",
+    "category":"Stream output",
+    "longtext":"YUVP converter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "130":{
+    "config":[],
+    "name":"scale",
+    "category":"Stream output",
+    "longtext":"Video scaling filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "162":{
+    "config":[],
+    "name":"i422_i420",
+    "category":"Stream output",
+    "longtext":"Conversions from I422,J422 to I420,IYUV,J420,YV12,YUVA",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "194":{
+    "config":[],
+    "name":"Memory input",
+    "category":"Stream output",
+    "longtext":"Memory input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "226":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"ASX playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "260":{
+    "config":{
+      "mod-megabass":false,
+      "mod-megabass-level":0,
+      "mod-reverb-level":0,
+      "mod-surround-delay":5,
+      "mod-surround-level":0,
+      "mod-noisereduction":true,
+      "mod-reverb-delay":40,
+      "mod-surround":false,
+      "mod-megabass-range":10,
+      "mod-reverb":false
+    },
+    "name":"MOD",
+    "category":"Stream output",
+    "longtext":"MOD demuxer (libmodplug)",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "324":{
+    "config":[],
+    "name":"CC 608/708",
+    "category":"Stream output",
+    "longtext":"Closed Captions decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "388":{
+    "config":[],
+    "name":"i420_yuy2_mmx",
+    "category":"Advanced",
+    "longtext":"MMX conversions from I420,IYUV,YV12 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv",
+    "capability":"video filter2",
+    "subcategory":"Muxers"
+  },
+  "261":{
+    "config":{
+      "mjpeg-fps":0
+    },
+    "name":"MJPEG",
+    "category":"Stream output",
+    "longtext":"M-JPEG camera demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "325":{
+    "config":[],
+    "name":"mpeg_audio",
+    "category":"Stream output",
+    "longtext":"MPEG audio layer I/II/III decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "389":{
+    "config":[],
+    "name":"i420_rgb_mmx",
+    "category":"Advanced",
+    "longtext":"MMX I420,IYUV,YV12 to RV15,RV16,RV24,RV32 conversions",
+    "capability":"video filter2",
+    "subcategory":"Muxers"
+  },
+  "131":{
+    "config":{
+      "marq-timeout":0,
+      "marq-marquee":"VLC",
+      "marq-opacity":255,
+      "marq-y":0,
+      "marq-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "marq-color":"",
+      "marq-x":0,
+      "marq-refresh":1000,
+      "marq-size":-1
+    },
+    "name":"Marquee",
+    "category":"Stream output",
+    "longtext":"Marquee display",
+    "help":"Display text above the video",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "163":{
+    "config":[],
+    "name":"memcpymmxext",
+    "category":"Stream output",
+    "longtext":"MMX EXT memcpy",
+    "capability":"memcpy",
+    "subcategory":"Advanced settings"
+  },
+  "195":{
+    "config":[],
+    "name":"Memory input",
+    "category":"Stream output",
+    "longtext":"Memory input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "227":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"New winamp 5.2 shoutcast import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "262":{
+    "config":[],
+    "name":"au",
+    "category":"Stream output",
+    "longtext":"AU demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "326":{
+    "config":[],
+    "name":"mpeg_audio",
+    "category":"Stream output",
+    "longtext":"MPEG audio layer I/II/III packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "390":{
+    "config":[],
+    "name":"memcpymmx",
+    "category":"Advanced",
+    "longtext":"MMX memcpy",
+    "capability":"memcpy",
+    "subcategory":"Advanced settings"
+  },
+  "33":{
+    "config":{
+      "headphone-compensate":false,
+      "headphone-dim":10,
+      "headphone-dolby":false
+    },
+    "name":"Headphone effect",
+    "longtext":"Headphone virtual spatialization effect",
+    "help":"This effect gives you the feeling that you are standing in a room with a complete 7.1 speaker set when using only a headphone, providing a more realistic sound experience. It should also be more comfortable and less tiring when listening to music for long periods of time.\nIt works with any source format from mono to 7.1.",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "41":{
+    "config":[],
+    "name":"MTP",
+    "longtext":"MTP devices",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "49":{
+    "config":[],
+    "name":"Video capture",
+    "category":"Playlist",
+    "longtext":"Video capture (Video4Linux)",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "57":{
+    "config":[],
+    "name":"Audio",
+    "category":"Playlist",
+    "longtext":"My Music",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "66":{
+    "config":[],
+    "name":"X window",
+    "category":"Video",
+    "longtext":"X11 video window (XCB)",
+    "capability":"vout window xid",
+    "subcategory":"Output modules"
+  },
+  "82":{
+    "config":[],
+    "name":"stream_out_gather",
+    "category":"Subtitles codecs",
+    "longtext":"Gathering stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "98":{
+    "config":{
+      "rtsp-timeout":60,
+      "sout-rtp-name":"",
+      "sout-rtp-rtcp-mux":false,
+      "sout-rtp-ttl":-1,
+      "sout-rtsp-pwd":"",
+      "sout-rtp-mp4a-latm":false,
+      "sout-rtsp-user":"",
+      "sout-rtp-salt":"",
+      "sout-rtp-port":5004,
+      "sout-rtp-port-video":0,
+      "sout-rtp-description":"",
+      "sout-rtp-port-audio":0,
+      "sout-rtp-mux":"",
+      "sout-rtp-sap":false,
+      "sout-rtp-sdp":"",
+      "sout-rtp-key":"",
+      "sout-rtp-caching":300,
+      "sout-rtp-proto":{
+        "DCCP":"dccp",
+        "SCTP":"sctp",
+        "UDP-Lite":"udplite",
+        "UDP":"udp",
+        "TCP":"tcp"
+      },
+      "sout-rtp-phone":"",
+      "sout-rtp-email":"",
+      "sout-rtp-dst":"",
+      "sout-rtp-url":""
+    },
+    "name":"RTP",
+    "category":"Stream output",
+    "longtext":"RTP stream output",
+    "capability":"sout stream",
+    "subcategory":"VOD"
+  },
+  "114":{
+    "config":{
+      "sout-deinterlace-mode":{
+        "Discard":"discard",
+        "Mean":"mean",
+        "Blend":"blend",
+        "X":"x",
+        "Linear":"linear",
+        "Phosphor":"phosphor",
+        "Yadif (2x)":"yadif2x",
+        "Film NTSC (IVTC)":"ivtc",
+        "Yadif":"yadif",
+        "Bob":"bob"
+      },
+      "sout-deinterlace-phosphor-chroma":{
+        "Upconvert":4,
+        "Latest":1,
+        "Blend":3,
+        "AltLine":2
+      },
+      "sout-deinterlace-phosphor-dimmer":{
+        "Low":2,
+        "Off":1,
+        "High":4,
+        "Medium":3
+      }
+    },
+    "name":"Deinterlace",
+    "category":"Stream output",
+    "longtext":"Deinterlacing video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "132":{
+    "config":{
+      "gradfun-radius":16,
+      "gradfun-strength":1.2000000476837
+    },
+    "name":"Gradfun",
+    "category":"Stream output",
+    "longtext":"Gradfun video filter",
+    "help":"Debanding algorithm",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "164":{
+    "config":[],
+    "name":"stream_filter_record",
+    "category":"Stream output",
+    "longtext":"Internal stream record",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "196":{
+    "config":{
+      "alsa-stereo":true,
+      "alsa-samplerate":48000,
+      "alsa-format":{
+        "PCM S8":"s8",
+        "PCM S24 BE":"s24b",
+        "GSM Audio":"gsm",
+        "PCM U8":"u8",
+        "PCM U32 BE":"u32b",
+        "PCM S16 BE":"s16b",
+        "PCM S32 LE":"s32l",
+        "PCM U24 LE":"u24l",
+        "PCM S16 LE":"s16l",
+        "PCM U24 BE":"u24b",
+        "PCM U32 LE":"u32l",
+        "PCM F32 LE":"f32l",
+        "PCM F64 BE":"f64b",
+        "PCM F64 LE":"f64l",
+        "PCM F32 BE":"f32b",
+        "PCM U16 BE":"u16b",
+        "PCM S32 BE":"s32b",
+        "PCM U16 LE":"u16l",
+        "PCM S24 LE":"s24l"
+      }
+    },
+    "name":"ALSA",
+    "category":"Stream output",
+    "longtext":"ALSA audio capture input",
+    "help":"Use alsa:// to open the default audio input. If multiple audio inputs are available, they will be listed in the vlc debug output. To select hw:0,1 , use alsa://hw:0,1 .",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "228":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"XSPF playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "264":{
+    "config":[],
+    "name":"wav",
+    "category":"Stream output",
+    "longtext":"WAV demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "328":{
+    "config":[],
+    "name":"Vorbis",
+    "category":"Stream output",
+    "longtext":"Vorbis audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "392":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"services probe",
+    "subcategory":"Control interfaces"
+  },
+  "265":{
+    "config":{
+      "dirac-dts-offset":0
+    },
+    "name":"Dirac",
+    "category":"Stream output",
+    "longtext":"Dirac video demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "329":{
+    "config":[],
+    "name":"Vorbis",
+    "category":"Stream output",
+    "longtext":"Vorbis audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "393":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"French TV",
+    "capability":"services_discovery",
+    "subcategory":"Control interfaces"
+  },
+  "133":{
+    "config":[],
+    "name":"Wave",
+    "category":"Stream output",
+    "longtext":"Wave video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "165":{
+    "config":[],
+    "name":"stream_filter_httplive",
+    "category":"Stream output",
+    "longtext":"Http Live Streaming stream filter",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "197":{
+    "config":[],
+    "name":"MTP",
+    "category":"Stream output",
+    "longtext":"MTP input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "229":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"Podcast parser",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "266":{
+    "config":[],
+    "name":"vobsub",
+    "category":"Stream output",
+    "longtext":"Vobsub subtitles parser",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "330":{
+    "config":{
+      "sout-dirac-dwt-depth":-1,
+      "sout-dirac-prefilter":{
+        "Diagonal Linear Phase":"diaglp",
+        "Centre Weighted Median":"cwm",
+        "Rectangular Linear Phase":"rectlp",
+        "none":"none"
+      },
+      "sout-dirac-prefilter-strength":1,
+      "sout-dirac-dwt-inter":-1,
+      "sout-dirac-l1-sep":-1,
+      "sout-dirac-bitrate":-1,
+      "sout-dirac-coding-mode":{
+        "force coding frame as separate interlaced fields":"field",
+        "auto - let encoder decide based upon input (Best)":"auto",
+        "force coding frame as single picture":"progressive"
+      },
+      "sout-dirac-spartition":-1,
+      "sout-dirac-mc-blk-width":-1,
+      "sout-dirac-mc-blk-xblen":-1,
+      "sout-dirac-dwt-intra":-1,
+      "sout-dirac-mc-blk-yblen":-1,
+      "sout-dirac-quality":5.5,
+      "sout-dirac-me-combined":true,
+      "sout-dirac-num-l1":-1,
+      "sout-dirac-mc-blk-overlap":-1,
+      "sout-dirac-chroma-fmt":{
+        "4:2:0":"420",
+        "4:2:2":"422",
+        "4:4:4":"444"
+      },
+      "sout-dirac-lossless":false,
+      "sout-dirac-cpd":-1,
+      "sout-dirac-noac":false,
+      "sout-dirac-me-simple-search":"",
+      "sout-dirac-multi-quant":-1,
+      "sout-dirac-mc-blk-height":-1,
+      "sout-dirac-mv-prec":{
+        "1":"1",
+        "1/8":"1/8",
+        "1/4":"1/4",
+        "1/2":"1/2"
+      }
+    },
+    "name":"Dirac",
+    "category":"Stream output",
+    "longtext":"Dirac video encoder using dirac-research library",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "394":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Freebox TV",
+    "capability":"services_discovery",
+    "subcategory":"Control interfaces"
+  },
+  "67":{
+    "config":[],
+    "name":"Drawable",
+    "category":"Video",
+    "longtext":"Embedded window video",
+    "capability":"vout window xid",
+    "subcategory":"Output modules"
+  },
+  "83":{
+    "config":[],
+    "name":"Autodel",
+    "category":"Subtitles codecs",
+    "longtext":"Automatically add/delete input streams",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "99":{
+    "config":[],
+    "name":"RTSP VoD",
+    "category":"Stream output",
+    "longtext":"RTSP VoD server",
+    "capability":"vod server",
+    "subcategory":"VOD"
+  },
+  "115":{
+    "config":{
+      "scene-prefix":"scene",
+      "scene-format":"png",
+      "scene-height":-1,
+      "scene-replace":false,
+      "scene-width":-1,
+      "scene-ratio":50
+    },
+    "name":"Scene filter",
+    "category":"Stream output",
+    "longtext":"Scene video filter",
+    "help":"Send your video to picture files",
+    "capability":"video filter2",
+    "subcategory":"Output modules"
+  },
+  "134":{
+    "config":{
+      "puzzle-rows":4,
+      "puzzle-cols":4,
+      "puzzle-black-slot":false
+    },
+    "name":"Puzzle",
+    "category":"Stream output",
+    "longtext":"Puzzle interactive game video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "166":{
+    "config":[],
+    "name":"decomp",
+    "category":"Stream output",
+    "longtext":"Decompression",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "198":{
+    "config":[],
+    "name":"SMB",
+    "category":"Stream output",
+    "longtext":"SMB input",
+    "help":"Samba (Windows network shares) input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "230":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"DVB playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "268":{
+    "config":[],
+    "name":"mpc",
+    "category":"Stream output",
+    "longtext":"MusePack demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "332":{
+    "config":{
+      "soundfont":""
+    },
+    "name":"FluidSynth",
+    "category":"Stream output",
+    "longtext":"FluidSynth MIDI synthesizer",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "396":{
+    "config":[],
+    "name":"Lua Extension",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"extension",
+    "subcategory":"Control interfaces"
+  },
+  "269":{
+    "config":[],
+    "name":"OGG",
+    "category":"Stream output",
+    "longtext":"OGG demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "333":{
+    "config":{
+      "sout-twolame-vbr":false,
+      "sout-twolame-mode":{
+        "Dual mono":1,
+        "Stereo":0,
+        "Joint stereo":2
+      },
+      "sout-twolame-psy":3,
+      "sout-twolame-quality":0
+    },
+    "name":"Twolame",
+    "category":"Stream output",
+    "longtext":"Libtwolame audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "397":{
+    "config":[],
+    "name":"Lua Art",
+    "category":"Advanced",
+    "longtext":"Fetch artwork using lua scripts",
+    "capability":"art finder",
+    "subcategory":"Control interfaces"
+  },
+  "135":{
+    "config":{
+      "audiobargraph_v-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "audiobargraph_v-transparency":255,
+      "audiobargraph_v-y":0,
+      "audiobargraph_v-x":0,
+      "audiobargraph_v-barWidth":10,
+      "audiobargraph_v-alarm":0
+    },
+    "name":"Audio Bar Graph Video",
+    "category":"Stream output",
+    "longtext":"Audio Bar Graph Video sub source",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "167":{
+    "config":[],
+    "name":"decomp",
+    "category":"Stream output",
+    "longtext":"Decompression",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "199":{
+    "config":{
+      "ignore-filetypes":"m3u,db,nfo,ini,jpg,jpeg,ljpg,gif,png,pgm,pgmyuv,pbm,pam,tga,bmp,pnm,xpm,xcf,pcx,tif,tiff,lbm,sfv,txt,sub,idx,srt,cue,ssa",
+      "recursive":{
+        "expand":"expand",
+        "collapse":"collapse",
+        "none":"none"
+      }
+    },
+    "name":"File",
+    "category":"Stream output",
+    "longtext":"File input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "231":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"B4S playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "17":{
+    "config":{
+      "speex-resampler-quality":4
+    },
+    "name":"Speex resampler",
+    "longtext":"Speex resampler",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "21":{
+    "config":{
+      "sout-mono-channel":{
+        "Rear right":5,
+        "Low-frequency effects":8,
+        "Right":1,
+        "Left":0,
+        "Side left":2,
+        "Center":7,
+        "Side right":3,
+        "Rear center":6,
+        "Rear left":4
+      },
+      "sout-mono-downmix":true
+    },
+    "name":"Mono",
+    "longtext":"Audio filter for stereo to mono conversion",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "25":{
+    "config":[],
+    "name":"a52tospdif",
+    "longtext":"Audio filter for A/52->S/PDIF encapsulation",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "29":{
+    "config":[],
+    "name":"mpgatofixed32",
+    "longtext":"MPEG audio decoder",
+    "capability":"audio filter",
+    "subcategory":"Audio codecs"
+  },
+  "34":{
+    "config":{
+      "wet-mix":0.40000000596046,
+      "delay-time":40,
+      "sweep-depth":6,
+      "dry-mix":0.40000000596046,
+      "sweep-rate":6,
+      "feedback-gain":0.5
+    },
+    "name":"Delay",
+    "longtext":"Sound Delay",
+    "help":"Add a delay effect to the sound",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "42":{
+    "config":[],
+    "name":"MTP",
+    "longtext":"MTP devices",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "50":{
+    "config":[],
+    "name":"Discs",
+    "category":"Playlist",
+    "longtext":"Discs",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "58":{
+    "config":[],
+    "name":"UPnP",
+    "category":"Playlist",
+    "longtext":"Universal Plug'n'Play",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "68":{
+    "config":{
+      "yuv-yuv4mpeg2":false,
+      "yuv-file":"stream.yuv"
+    },
+    "name":"YUV output",
+    "category":"Video",
+    "longtext":"YUV video output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "84":{
+    "config":{
+      "sout-select-disable":-1,
+      "sout-select-enable":-1,
+      "sout-select-port":5001
+    },
+    "name":"Select",
+    "category":"Subtitles codecs",
+    "longtext":"Select individual es to enable or disable from stream",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "100":{
+    "config":{
+      "overlay-output":"",
+      "overlay-input":""
+    },
+    "name":"Overlay",
+    "category":"Stream output",
+    "longtext":"Dynamic video overlay",
+    "capability":"sub source",
+    "subcategory":"Filters"
+  },
+  "116":{
+    "config":[],
+    "name":"Motion Detect",
+    "category":"Stream output",
+    "longtext":"Motion detect video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "136":{
+    "config":[],
+    "name":"Audio Bar Graph Video",
+    "category":"Stream output",
+    "longtext":"Audio Bar Graph Video sub source",
+    "capability":"video filter2",
+    "subcategory":"Subtitles/OSD"
+  },
+  "168":{
+    "config":[],
+    "name":"decomp",
+    "category":"Stream output",
+    "longtext":"Decompression",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "200":{
+    "config":[],
+    "name":"File",
+    "category":"Stream output",
+    "longtext":"File input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "232":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"PLS playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "272":{
+    "config":[],
+    "name":"Audio ES",
+    "category":"Stream output",
+    "longtext":"MPEG-4 video",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "336":{
+    "config":{
+      "dvbsub-y":-1,
+      "sout-dvbsub-y":-1,
+      "dvbsub-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "sout-dvbsub-x":-1,
+      "dvbsub-x":-1
+    },
+    "name":"DVB subtitles",
+    "category":"Stream output",
+    "longtext":"DVB subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "400":{
+    "config":[],
+    "name":"Lua Meta Fetcher",
+    "category":"Advanced",
+    "longtext":"Fetch meta data using lua scripts",
+    "capability":"meta fetcher",
+    "subcategory":"Control interfaces"
+  },
+  "273":{
+    "config":[],
+    "name":"mpgv",
+    "category":"Stream output",
+    "longtext":"MPEG-I/II video demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "337":{
+    "config":[],
+    "name":"DVB subtitles",
+    "category":"Stream output",
+    "longtext":"DVB subtitles encoder",
+    "capability":"encoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "401":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "137":{
+    "config":{
+      "osdmenu-alpha":255,
+      "osdmenu-x":-1,
+      "osdmenu-y":-1,
+      "osdmenu-file":"",
+      "osdmenu-update":300,
+      "osdmenu-file-path":"",
+      "osdmenu-timeout":15,
+      "osdmenu-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      }
+    },
+    "name":"OSD menu",
+    "category":"Stream output",
+    "longtext":"On Screen Display menu",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "169":{
+    "config":[],
+    "name":"DASH",
+    "category":"Stream output",
+    "longtext":"Dynamic Adaptive Streaming over HTTP",
+    "capability":"stream_filter",
+    "subcategory":"Stream filters"
+  },
+  "201":{
+    "config":{
+      "dvdnav-angle":1,
+      "dvdnav-menu":true
+    },
+    "name":"DVD with menus",
+    "category":"Stream output",
+    "longtext":"DVDnav Input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "233":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"RAM playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "274":{
+    "config":{
+      "mkv-preload-local-dir":false,
+      "mkv-use-chapter-codec":true,
+      "mkv-use-ordered-chapters":true,
+      "mkv-seek-percent":false,
+      "mkv-use-dummy":false
+    },
+    "name":"Matroska",
+    "category":"Stream output",
+    "longtext":"Matroska stream demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "338":{
+    "config":[],
+    "name":"memcpy3dn",
+    "category":"Stream output",
+    "longtext":"3D Now! memcpy",
+    "capability":"memcpy",
+    "subcategory":"Advanced settings"
+  },
+  "402":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "69":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Video",
+    "longtext":"Dummy video output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "85":{
+    "config":{
+      "sout-mosaic-bridge-x":-1,
+      "sout-mosaic-bridge-id":"Id",
+      "sout-mosaic-bridge-sar":"1:1",
+      "sout-mosaic-bridge-height":0,
+      "sout-mosaic-bridge-y":-1,
+      "sout-mosaic-bridge-alpha":255,
+      "sout-mosaic-bridge-width":0,
+      "sout-mosaic-bridge-vfilter":""
+    },
+    "name":"Mosaic bridge",
+    "category":"Subtitles codecs",
+    "longtext":"Mosaic bridge stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "101":{
+    "config":[],
+    "name":"Magnify",
+    "category":"Stream output",
+    "longtext":"Magnify/Zoom interactive video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "117":{
+    "config":{
+      "antiflicker-window-size":10,
+      "antiflicker-softening-size":10
+    },
+    "name":"antiflicker",
+    "category":"Stream output",
+    "longtext":"antiflicker video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "138":{
+    "config":{
+      "gradient-cartoon":true,
+      "gradient-mode":{
+        "Gradient":"gradient",
+        "Edge":"edge",
+        "Hough":"hough"
+      },
+      "gradient-type":0
+    },
+    "name":"Gradient",
+    "category":"Stream output",
+    "longtext":"Gradient video filter",
+    "help":"Apply color gradient or edge detection effects",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "170":{
+    "config":{
+      "album-art-filename":""
+    },
+    "name":"Folder",
+    "category":"Stream output",
+    "longtext":"Folder meta data",
+    "capability":"art finder",
+    "subcategory":"Stream filters"
+  },
+  "202":{
+    "config":[],
+    "name":"DV",
+    "category":"Stream output",
+    "longtext":"Digital Video (Firewire/ieee1394)  input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "234":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"M3U playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "276":{
+    "config":{
+      "avi-interleaved":false,
+      "avi-index":{
+        "Always fix":1,
+        "Ask for action":0,
+        "Never fix":2
+      }
+    },
+    "name":"AVI",
+    "category":"Stream output",
+    "longtext":"AVI demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "340":{
+    "config":{
+      "sout-livehttp-numsegs":0,
+      "sout-livehttp-delsegs":true,
+      "sout-livehttp-ratecontrol":false,
+      "sout-livehttp-splitanywhere":false,
+      "sout-livehttp-seglen":10
+    },
+    "name":"LiveHTTP",
+    "category":"Stream output",
+    "longtext":"HTTP Live streaming output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "404":{
+    "config":{
+      "skins2-transparency":false,
+      "skinned-video":true,
+      "skinned-playlist":true,
+      "skins2-last":""
+    },
+    "name":"Skins",
+    "category":"Advanced",
+    "longtext":"Skinnable Interface",
+    "capability":"interface",
+    "subcategory":"Main interfaces"
+  },
+  "277":{
+    "config":[],
+    "name":"asf",
+    "category":"Stream output",
+    "longtext":"ASF/WMV demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "341":{
+    "config":{
+      "sout-http-mime":"",
+      "sout-http-pwd":"",
+      "sout-http-user":""
+    },
+    "name":"HTTP",
+    "category":"Stream output",
+    "longtext":"HTTP stream output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "405":{
+    "config":[],
+    "name":"Skins",
+    "category":"Advanced",
+    "longtext":"Skinnable Interface",
+    "capability":"vout window xid",
+    "subcategory":"Main interfaces"
+  },
+  "139":{
+    "config":[],
+    "name":"Ripple",
+    "category":"Stream output",
+    "longtext":"Ripple video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "171":{
+    "config":[],
+    "name":"taglib",
+    "category":"Stream output",
+    "longtext":"taglib",
+    "capability":"meta reader",
+    "subcategory":"Stream filters"
+  },
+  "203":{
+    "config":{
+      "linsys-sdi-audio":"0=1,1",
+      "linsys-sdi-aspect-ratio":"",
+      "linsys-sdi-telx":"",
+      "linsys-sdi-link":0,
+      "linsys-sdi-id-video":0,
+      "linsys-sdi-telx-lang":""
+    },
+    "name":"SDI",
+    "category":"Stream output",
+    "longtext":"SDI Input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "235":{
+    "config":[],
+    "name":"Avformat",
+    "category":"Stream output",
+    "longtext":"Avformat demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "278":{
+    "config":{
+      "ffmpeg-hw":true,
+      "ffmpeg-debug":0,
+      "ffmpeg-fast":false,
+      "sout-ffmpeg-interlace-me":true,
+      "sout-ffmpeg-trellis":false,
+      "sout-ffmpeg-bframes":0,
+      "sout-ffmpeg-hurry-up":false,
+      "ffmpeg-threads":0,
+      "ffmpeg-lowres":0,
+      "ffmpeg-skiploopfilter":{
+        "Non-key":3,
+        "Bidir":2,
+        "Non-ref":1,
+        "All":4,
+        "None":0
+      },
+      "ffmpeg-hurry-up":true,
+      "sout-ffmpeg-qscale":0,
+      "sout-ffmpeg-lumi-masking":0,
+      "sout-ffmpeg-mpeg4-matrix":false,
+      "ffmpeg-workaround-bugs":1,
+      "sout-ffmpeg-keyint":0,
+      "sout-ffmpeg-rc-buffer-size":1835008,
+      "sout-ffmpeg-chroma-elim-threshold":0,
+      "ffmpeg-skip-idct":0,
+      "sout-ffmpeg-border-masking":0,
+      "sout-ffmpeg-vt":0,
+      "sout-ffmpeg-qmax":0,
+      "sout-ffmpeg-p-masking":0,
+      "ffmpeg-skip-frame":0,
+      "sout-ffmpeg-dark-masking":0,
+      "sout-ffmpeg-strict":0,
+      "sout-ffmpeg-luma-elim-threshold":0,
+      "sout-ffmpeg-qmin":0,
+      "sout-ffmpeg-noise-reduction":0,
+      "sout-ffmpeg-i-quant-factor":0,
+      "ffmpeg-dr":true,
+      "sout-ffmpeg-interlace":false,
+      "sout-ffmpeg-rc-buffer-aggressivity":1,
+      "sout-ffmpeg-aac-profile":"low",
+      "ffmpeg-error-resilience":1,
+      "sout-ffmpeg-hq":{
+        "simple":"simple",
+        "rd":"rd",
+        "bits":"bits"
+      },
+      "sout-ffmpeg-pre-me":false,
+      "ffmpeg-vismv":0
+    },
+    "name":"FFmpeg",
+    "category":"Stream output",
+    "longtext":"FFmpeg audio/video decoder",
+    "help":"Various audio and video decoders/encoders delivered by the FFmpeg library. This includes (MS)MPEG4, DivX, SV1,H261, H263, H264, WMV, WMA, AAC, AMR, DV, MJPEG and other codecs",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "342":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dummy stream output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "406":{
+    "config":{
+      "browse-dir":""
+    },
+    "name":"Ncurses",
+    "category":"Advanced",
+    "longtext":"Ncurses interface",
+    "capability":"interface",
+    "subcategory":"Main interfaces"
+  },
+  "35":{
+    "config":[],
+    "name":"converter_fixed",
+    "longtext":"Fixed point audio format conversions",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "43":{
+    "config":[],
+    "name":"Bonjour",
+    "longtext":"Bonjour services",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "51":{
+    "config":[],
+    "name":"Audio capture",
+    "category":"Playlist",
+    "longtext":"Audio capture (ALSA)",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "59":{
+    "config":[],
+    "name":"UPnP",
+    "category":"Playlist",
+    "longtext":"Universal Plug'n'Play",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "70":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Video",
+    "longtext":"Statistics video output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "86":{
+    "config":{
+      "sout-display-video":true,
+      "sout-display-audio":true,
+      "sout-display-delay":100
+    },
+    "name":"Display",
+    "category":"Subtitles codecs",
+    "longtext":"Display stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "102":{
+    "config":{
+      "grain-period-max":48,
+      "grain-variance":2,
+      "grain-period-min":1
+    },
+    "name":"Grain",
+    "category":"Stream output",
+    "longtext":"Grain video filter",
+    "help":"Adds filtered gaussian noise",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "118":{
+    "config":{
+      "posterize-level":6
+    },
+    "name":"Posterize",
+    "category":"Stream output",
+    "longtext":"Posterize video filter",
+    "help":"Posterize video by lowering the number of colors",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "140":{
+    "config":{
+      "sepia-intensity":120
+    },
+    "name":"Sepia",
+    "category":"Stream output",
+    "longtext":"Sepia video filter",
+    "help":"Gives video a warmer tone by applying sepia effect",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "172":{
+    "config":[],
+    "name":"taglib",
+    "category":"Stream output",
+    "longtext":"taglib",
+    "capability":"meta writer",
+    "subcategory":"Stream filters"
+  },
+  "204":{
+    "config":[],
+    "name":"SDI",
+    "category":"Stream output",
+    "longtext":"SDI Demux",
+    "capability":"demux",
+    "subcategory":"Access modules"
+  },
+  "236":{
+    "config":[],
+    "name":"Avformat",
+    "category":"Stream output",
+    "longtext":"Avformat muxer",
+    "capability":"sout mux",
+    "subcategory":"Demuxers"
+  },
+  "280":{
+    "config":[],
+    "name":"FFmpeg",
+    "category":"Stream output",
+    "longtext":"FFmpeg audio/video encoder",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "344":{
+    "config":{
+      "sout-shout-channels":"",
+      "sout-shout-bitrate":"",
+      "sout-shout-name":"VLC media player - Live stream",
+      "sout-shout-description":"Live stream from VLC media player",
+      "sout-shout-public":false,
+      "sout-shout-quality":"",
+      "sout-shout-samplerate":"",
+      "sout-shout-mp3":false,
+      "sout-shout-url":"http://www.videolan.org/vlc",
+      "sout-shout-genre":"Alternative"
+    },
+    "name":"Shoutcast",
+    "category":"Stream output",
+    "longtext":"IceCAST output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "408":{
+    "config":[],
+    "name":"Qt",
+    "category":"Advanced",
+    "longtext":"Qt interface",
+    "capability":"vout window xid",
+    "subcategory":"Main interfaces"
+  },
+  "281":{
+    "config":{
+      "dvdsub-transparency":false
+    },
+    "name":"DVD subtitles",
+    "category":"Stream output",
+    "longtext":"DVD subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "345":{
+    "config":[],
+    "name":"Global Hotkeys",
+    "category":"Stream output",
+    "longtext":"Global Hotkeys interface",
+    "capability":"interface",
+    "subcategory":"Hotkeys settings"
+  },
+  "409":{
+    "config":[],
+    "name":"Qt",
+    "category":"Advanced",
+    "longtext":"Dialogs provider",
+    "capability":"dialogs provider",
+    "subcategory":"Main interfaces"
+  },
+  "141":{
+    "config":{
+      "rmtosd-vnc-polling":false,
+      "rmtosd-key-events":false,
+      "rmtosd-password":"",
+      "rmtosd-host":"myvdr",
+      "rmtosd-update":1000,
+      "rmtosd-port":20001,
+      "rmtosd-mouse-events":false,
+      "rmtosd-alpha":255
+    },
+    "name":"Remote-OSD",
+    "category":"Stream output",
+    "longtext":"Remote-OSD over VNC",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "173":{
+    "config":{
+      "effect-width":800,
+      "effect-list":"spectrum",
+      "spect-radius":42,
+      "spect-show-peaks":true,
+      "spect-show-base":true,
+      "spect-peak-width":61,
+      "spect-color":80,
+      "spect-80-bands":true,
+      "spect-sections":3,
+      "spect-peak-height":1,
+      "effect-height":500,
+      "spect-show-original":false,
+      "visual-80-bands":true,
+      "visual-peaks":true,
+      "spect-separ":1,
+      "spect-show-bands":true,
+      "spect-amp":8
+    },
+    "name":"Visualizer",
+    "category":"Stream output",
+    "longtext":"Visualizer filter",
+    "capability":"visualization2",
+    "subcategory":"Visualizations"
+  },
+  "205":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dummy input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "237":{
+    "config":[],
+    "name":"real",
+    "category":"Stream output",
+    "longtext":"Real demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "282":{
+    "config":[],
+    "name":"DVD subtitles",
+    "category":"Stream output",
+    "longtext":"DVD subtitles packetizer",
+    "capability":"packetizer",
+    "subcategory":"Subtitles codecs"
+  },
+  "346":{
+    "config":{
+      "hotkeys-mousewheel-mode":{
+        "Position Control":1,
+        "Volume Control":0,
+        "Ignore":2
+      }
+    },
+    "name":"Hotkeys",
+    "category":"Stream output",
+    "longtext":"Hotkeys management interface",
+    "capability":"interface",
+    "subcategory":"Hotkeys settings"
+  },
+  "71":{
+    "config":{
+      "v4l2_output_dev":"/dev/video0",
+      "v4l2_output_profile":{
+        "Flash Plugin":"flashplugin",
+        "Skype":"skype",
+        "None":""
+      }
+    },
+    "name":"V4L2 Output",
+    "category":"Video",
+    "longtext":"V4L2 Output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "87":{
+    "config":[],
+    "name":"Smem",
+    "category":"Subtitles codecs",
+    "longtext":"Stream output to memory buffer",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "103":{
+    "config":{
+      "wall-cols":3,
+      "wall-element-aspect":"16:9",
+      "wall-rows":3
+    },
+    "name":"Image wall",
+    "category":"Stream output",
+    "longtext":"Wall video filter",
+    "capability":"video splitter",
+    "subcategory":"Filters"
+  },
+  "119":{
+    "config":{
+      "erase-mask":"",
+      "erase-y":0,
+      "erase-x":0
+    },
+    "name":"Erase",
+    "category":"Stream output",
+    "longtext":"Erase video filter",
+    "help":"Remove zones of the video using a picture as mask",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "142":{
+    "config":{
+      "panoramix-bz-gamma-red":1,
+      "panoramix-bz-blacklevel-green":150,
+      "panoramix-rows":-1,
+      "panoramix-bz-gamma-blue":1,
+      "panoramix-bz-blackcrush-red":140,
+      "panoramix-bz-middle":50,
+      "panoramix-bz-gamma-green":1,
+      "panoramix-bz-blackcrush-blue":140,
+      "panoramix-cols":-1,
+      "panoramix-bz-whitelevel-blue":0,
+      "panoramix-bz-begin":0,
+      "panoramix-bz-end":100,
+      "panoramix-bz-whitecrush-green":200,
+      "panoramix-attenuate":true,
+      "panoramix-bz-whitecrush-blue":200,
+      "panoramix-bz-whitelevel-red":0,
+      "panoramix-bz-length":100,
+      "panoramix-bz-blacklevel-blue":150,
+      "panoramix-bz-blackcrush-green":140,
+      "panoramix-bz-height":100,
+      "panoramix-bz-whitecrush-red":200,
+      "panoramix-bz-blacklevel-red":150,
+      "panoramix-bz-middle-pos":50,
+      "panoramix-bz-whitelevel-green":0
+    },
+    "name":"Panoramix",
+    "category":"Stream output",
+    "longtext":"Panoramix: wall with overlap video filter",
+    "help":"Split the video in multiple windows to display on a wall of screens",
+    "capability":"video splitter",
+    "subcategory":"Filters"
+  },
+  "174":{
+    "config":{
+      "goom-width":800,
+      "goom-speed":6,
+      "goom-height":500
+    },
+    "name":"Goom",
+    "category":"Stream output",
+    "longtext":"Goom effect",
+    "capability":"visualization2",
+    "subcategory":"Visualizations"
+  },
+  "206":{
+    "config":{
+      "dvb-c-count":0,
+      "dvb-high-voltage":false,
+      "dvb-srate":0,
+      "dvb-b-count":0,
+      "dvb-b-interleaving":0,
+      "dvb-hierarchy":{
+        "1":1,
+        "2":2,
+        "Automatic":-1,
+        "4":4,
+        "None":0
+      },
+      "dvb-transmission":{
+        "16k":16,
+        "1k":1,
+        "8k":8,
+        "Automatic":-1,
+        "2k":2,
+        "32k":32,
+        "4k":4
+      },
+      "dvb-adapter":0,
+      "dvb-inversion":{
+        "Automatic":-1,
+        "Off":0,
+        "On":1
+      },
+      "dvb-frequency":0,
+      "dvb-c-interleaving":0,
+      "dvb-c-modulation":{
+        "DQPSK":"DQPSK",
+        "16-QAM":"16QAM",
+        "32-QAM":"32QAM",
+        "128-QAM":"128QAM",
+        "QPSK":"QPSK",
+        "256-QAM":"256QAM",
+        "16-APSK":"16APSK",
+        "8-PSK":"8PSK",
+        "8-VSB":"8VSB",
+        "64-QAM":"64QAM",
+        "32-APSK":"32APSK",
+        "Auto QAM":"QAM",
+        "16-VSB":"16VSB",
+        "Undefined":""
+      },
+      "dvb-a-count":0,
+      "dvb-budget-mode":false,
+      "dvb-code-rate-hp":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      },
+      "dvb-guard":{
+        "1/4":"1/4",
+        "19/128":"19/128",
+        "1/8":"1/8",
+        "19/256":"19/256",
+        "Automatic":"",
+        "1/16":"1/16",
+        "1/32":"1/32",
+        "1/128":"1/128"
+      },
+      "dvb-lnb-switch":11700000,
+      "dvb-rolloff":{
+        "Automatic":-1,
+        "0.25":25,
+        "0.20":20,
+        "0.35 (same as DVB-S)":35
+      },
+      "dvb-modulation":{
+        "DQPSK":"DQPSK",
+        "16-QAM":"16QAM",
+        "32-QAM":"32QAM",
+        "128-QAM":"128QAM",
+        "QPSK":"QPSK",
+        "256-QAM":"256QAM",
+        "16-APSK":"16APSK",
+        "8-PSK":"8PSK",
+        "8-VSB":"8VSB",
+        "64-QAM":"64QAM",
+        "32-APSK":"32APSK",
+        "Auto QAM":"QAM",
+        "16-VSB":"16VSB",
+        "Undefined":""
+      },
+      "dvb-b-fec":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      },
+      "dvb-code-rate-lp":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      },
+      "dvb-a-fec":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      },
+      "dvb-ts-id":0,
+      "dvb-b-modulation":{
+        "DQPSK":"DQPSK",
+        "16-QAM":"16QAM",
+        "32-QAM":"32QAM",
+        "128-QAM":"128QAM",
+        "QPSK":"QPSK",
+        "256-QAM":"256QAM",
+        "16-APSK":"16APSK",
+        "8-PSK":"8PSK",
+        "8-VSB":"8VSB",
+        "64-QAM":"64QAM",
+        "32-APSK":"32APSK",
+        "Auto QAM":"QAM",
+        "16-VSB":"16VSB",
+        "Undefined":""
+      },
+      "dvb-tone":{
+        "Automatic":-1,
+        "Off":0,
+        "On":1
+      },
+      "dvb-satno":{
+        "A/1":1,
+        "B/2":2,
+        "C/3":3,
+        "Unspecified":0,
+        "D/4":4
+      },
+      "dvb-bandwidth":{
+        "7 MHz":7,
+        "8 MHz":8,
+        "10 MHz":10,
+        "Automatic":0,
+        "1.712 MHz":2,
+        "5 MHz":5,
+        "6 MHz":6
+      },
+      "dvb-lnb-high":0,
+      "dvb-lnb-low":0,
+      "dvb-polarization":{
+        "Horizontal (18V)":"H",
+        "Vertical (13V)":"V",
+        "Unspecified (0V)":"",
+        "Circular Left Hand (18V)":"L",
+        "Circular Right Hand (13V)":"R"
+      },
+      "dvb-pilot":{
+        "Automatic":-1,
+        "Off":0,
+        "On":1
+      },
+      "dvb-fec":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      },
+      "dvb-a-modulation":{
+        "DQPSK":"DQPSK",
+        "16-QAM":"16QAM",
+        "32-QAM":"32QAM",
+        "128-QAM":"128QAM",
+        "QPSK":"QPSK",
+        "256-QAM":"256QAM",
+        "16-APSK":"16APSK",
+        "8-PSK":"8PSK",
+        "8-VSB":"8VSB",
+        "64-QAM":"64QAM",
+        "32-APSK":"32APSK",
+        "Auto QAM":"QAM",
+        "16-VSB":"16VSB",
+        "Undefined":""
+      },
+      "dvb-a-interleaving":0,
+      "dvb-c-fec":{
+        "3/5":"3/5",
+        "Automatic":"",
+        "4/5":"4/5",
+        "8/9":"8/9",
+        "3/4":"3/4",
+        "9/10":"9/10",
+        "7/8":"7/8",
+        "1/2":"1/2",
+        "5/6":"5/6",
+        "6/7":"6/7",
+        "2/3":"2/3",
+        "None":"0"
+      }
+    },
+    "name":"DTV",
+    "category":"Stream output",
+    "longtext":"Digital Television and Radio",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "238":{
+    "config":{
+      "image-id":-1,
+      "image-realtime":false,
+      "image-duration":10,
+      "image-decode":true,
+      "image-group":0,
+      "image-chroma":"",
+      "image-fps":"10/1"
+    },
+    "name":"Image",
+    "category":"Stream output",
+    "longtext":"Image demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "284":{
+    "config":{
+      "vbi-text":false,
+      "vbi-opaque":true,
+      "vbi-page":100,
+      "vbi-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      }
+    },
+    "name":"VBI & Teletext",
+    "category":"Stream output",
+    "longtext":"VBI and Teletext decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "348":{
+    "config":{
+      "motion-use-rotate":false
+    },
+    "name":"motion",
+    "category":"Stream output",
+    "longtext":"motion control interface",
+    "help":"Use HDAPS, AMS, APPLESMC or UNIMOTION motion sensors to rotate the video",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "285":{
+    "config":[],
+    "name":"png",
+    "category":"Stream output",
+    "longtext":"PNG video decoder",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "349":{
+    "config":{
+      "netsync-master":false,
+      "netsync-timeout":500
+    },
+    "name":"Network Sync",
+    "category":"Stream output",
+    "longtext":"Network synchronization",
+    "capability":"interface",
+    "subcategory":"Advanced settings"
+  },
+  "9":{
+    "config":[],
+    "name":"packetizer_dirac",
+    "longtext":"Dirac packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "11":{
+    "config":[],
+    "name":"packetizer_mlp",
+    "longtext":"MLP/TrueHD parser",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "13":{
+    "config":[],
+    "name":"packetizer_h264",
+    "longtext":"H.264 video packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "15":{
+    "config":[],
+    "name":"packetizer_mpeg4video",
+    "longtext":"MPEG4 video packetizer",
+    "capability":"packetizer",
+    "subcategory":"Packetizers"
+  },
+  "18":{
+    "config":[],
+    "name":"dtstospdif",
+    "longtext":"Audio filter for DTS->S/PDIF encapsulation",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "22":{
+    "config":[],
+    "name":"trivial_channel_mixer",
+    "longtext":"Audio filter for trivial channel mixing",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "26":{
+    "config":[],
+    "name":"simple_channel_mixer",
+    "longtext":"Audio filter for simple channel mixing",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "30":{
+    "config":{
+      "equalizer-preamp":12,
+      "equalizer-preset":{
+        "Ska":"ska",
+        "Flat":"flat",
+        "Full treble":"fulltreble",
+        "Soft":"soft",
+        "Club":"club",
+        "Dance":"dance",
+        "Large Hall":"largehall",
+        "Headphones":"headphones",
+        "Full bass and treble":"fullbasstreble",
+        "Full bass":"fullbass",
+        "Techno":"techno",
+        "Soft rock":"softrock",
+        "Rock":"rock",
+        "Reggae":"reggae",
+        "Classical":"classical",
+        "Pop":"pop",
+        "Party":"party",
+        "Live":"live"
+      },
+      "equalizer-2pass":false
+    },
+    "name":"Equalizer",
+    "longtext":"Equalizer with 10 bands",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "36":{
+    "config":[],
+    "name":"converter_fixed",
+    "longtext":"Fixed point audio format conversions",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "44":{
+    "config":[],
+    "name":"Bonjour",
+    "longtext":"Bonjour services",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "52":{
+    "config":[],
+    "name":"Audio capture",
+    "category":"Playlist",
+    "longtext":"Audio capture (PulseAudio)",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "60":{
+    "config":[],
+    "name":"Podcast",
+    "category":"Playlist",
+    "longtext":"Podcasts",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "72":{
+    "config":[],
+    "name":"Caca",
+    "category":"Video",
+    "longtext":"Color ASCII art video output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "88":{
+    "config":{
+      "sout-setlang-lang":"eng",
+      "sout-setid-new-id":0,
+      "sout-setlang-id":0,
+      "sout-setid-id":0
+    },
+    "name":"Set ID",
+    "category":"Stream output",
+    "longtext":"Change the id of an elementary stream",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "104":{
+    "config":{
+      "rotate-angle":30
+    },
+    "name":"Rotate",
+    "category":"Stream output",
+    "longtext":"Rotate video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "120":{
+    "config":{
+      "blendbench-blend-image":"",
+      "blendbench-base-chroma":"I420",
+      "blendbench-base-image":"",
+      "blendbench-loops":1000,
+      "blendbench-alpha":128,
+      "blendbench-blend-chroma":"YUVA"
+    },
+    "name":"Blendbench",
+    "category":"Stream output",
+    "longtext":"Blending benchmark filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "144":{
+    "config":[],
+    "name":"Psychedelic",
+    "category":"Stream output",
+    "longtext":"Psychedelic video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "176":{
+    "config":{
+      "v4l2-aspect-ratio":"4:3",
+      "v4l2-tuner-audio-mode":{
+        "Secondary language (Analog TV tuners only)":2,
+        "Mono":0,
+        "Stereo":1,
+        "Second audio program (Analog TV tuners only)":2,
+        "Primary language (Analog TV tuners only)":3,
+        "Unspecified":-1,
+        "Primary language left, Secondary language right":4
+      },
+      "v4l2-hue":-1,
+      "v4l2-chroma-gain-auto":-1,
+      "v4l2-rotate":-1,
+      "v4l2-color-killer":{
+        "Off":0,
+        "Unspecified":-1,
+        "On":1
+      },
+      "v4l2-width":-1,
+      "v4l2-contrast":-1,
+      "v4l2-audio-volume":-1,
+      "v4l2-tuner-frequency":-1,
+      "v4l2-brightness-auto":{
+        "Off":0,
+        "Unspecified":-1,
+        "On":1
+      },
+      "v4l2-color-effect":{
+        "Negative":3,
+        "Sketch":5,
+        "Unspecified":-1,
+        "Sepia":2,
+        "Emboss":4,
+        "Vivid":9,
+        "Sky blue":6,
+        "Skin whiten":8,
+        "Grass green":7,
+        "Black & white":1,
+        "None":0
+      },
+      "v4l2-saturation":-1,
+      "v4l2-brightness":-1,
+      "v4l2-fps":0,
+      "v4l2-controls-reset":false,
+      "v4l2-hue-auto":{
+        "Off":0,
+        "Unspecified":-1,
+        "On":1
+      },
+      "v4l2-audio-treble":-1,
+      "v4l2-audio-input":-1,
+      "v4l2-audio-bass":-1,
+      "v4l2-tuner":0,
+      "v4l2-audio-balance":-1,
+      "v4l2-auto-white-balance":{
+        "Off":0,
+        "Unspecified":-1,
+        "On":1
+      },
+      "v4l2-power-line-frequency":{
+        "50 Hz":1,
+        "Off":0,
+        "Unspecified":-1,
+        "60 Hz":2
+      },
+      "v4l2-audio-mute":false,
+      "v4l2-autogain":{
+        "Off":0,
+        "Unspecified":-1,
+        "On":1
+      },
+      "v4l2-sharpness":-1,
+      "v4l2-hflip":false,
+      "v4l2-band-stop-filter":-1,
+      "v4l2-height":-1,
+      "v4l2-blue-balance":-1,
+      "v4l2-backlight-compensation":-1,
+      "v4l2-chroma-gain":-1,
+      "v4l2-gain":-1,
+      "v4l2-vflip":false,
+      "v4l2-dev":"/dev/video0",
+      "v4l2-gamma":-1,
+      "v4l2-red-balance":-1,
+      "v4l2-standard":{
+        "PAL/SECAM D/K":"DK",
+        "SECAM B":"SECAM_B",
+        "ATSC":"ATSC",
+        "SECAM":"SECAM",
+        "NTSC":"NTSC",
+        "PAL/SECAM B":"B",
+        "PAL":"PAL",
+        "SECAM K":"SECAM_K",
+        "Undefined":"",
+        "PAL B":"PAL_B",
+        "PAL D/K":"PAL_DK",
+        "SECAM H":"SECAM_H",
+        "SECAM L":"SECAM_L",
+        "SECAM L/C":"SECAM_LC",
+        "SECAM D/K":"SECAM_DK",
+        "All":"ALL",
+        "PAL D":"PAL_D",
+        "NTSC M South Korea":"NTSC_M_KR",
+        "625 lines / 50 Hz":"625_50",
+        "PAL G":"PAL_G",
+        "PAL/NTSC M/N":"MN",
+        "PAL H":"PAL_H",
+        "525 lines / 60 Hz":"525_60",
+        "SECAM K1":"SECAM_K1",
+        "ATSC 8-VSB":"ATSC_8_VSB",
+        "SECAM G":"SECAM_G",
+        "SECAM D":"SECAM_D",
+        "PAL 60":"PAL_60",
+        "NTSC 443":"NTSC_443",
+        "PAL N":"PAL_N",
+        "ATSC 16-VSB":"ATSC_16_VSB",
+        "PAL D1":"PAL_D1",
+        "PAL N Argentina":"PAL_Nc",
+        "PAL M":"PAL_M",
+        "PAL K":"PAL_K",
+        "PAL/SECAM G/H":"GH",
+        "PAL I":"PAL_I",
+        "NTSC M":"NTSC_M",
+        "NTSC M Japan":"NTSC_M_JP",
+        "PAL B1":"PAL_B1",
+        "PAL B/G":"PAL_BG"
+      },
+      "v4l2-white-balance-temperature":-1,
+      "v4l2-audio-loudness":false,
+      "v4l2-input":0
+    },
+    "name":"Video4Linux2",
+    "category":"Stream output",
+    "longtext":"Video4Linux2 input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "208":{
+    "config":[],
+    "name":"UDP",
+    "category":"Stream output",
+    "longtext":"UDP input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "240":{
+    "config":[],
+    "name":"PS",
+    "category":"Stream output",
+    "longtext":"MPEG-PS demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "288":{
+    "config":[],
+    "name":"Speex",
+    "category":"Stream output",
+    "longtext":"Speex audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "352":{
+    "config":{
+      "dbus-unique-service-id":false
+    },
+    "name":"dbus",
+    "category":"Stream output",
+    "longtext":"D-Bus control interface",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "289":{
+    "config":[],
+    "name":"USFSubs",
+    "category":"Stream output",
+    "longtext":"USF subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "353":{
+    "config":[],
+    "name":"i420_yuy2_sse2",
+    "category":"Stream output",
+    "longtext":"SSE2 conversions from I420,IYUV,YV12 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "145":{
+    "config":{
+      "colorthres-saturationthres":20,
+      "colorthres-similaritythres":15,
+      "colorthres-color":""
+    },
+    "name":"Color threshold",
+    "category":"Stream output",
+    "longtext":"Color threshold filter",
+    "help":"Select one color in the video",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "177":{
+    "config":[],
+    "name":"Video4Linux2",
+    "category":"Stream output",
+    "longtext":"Video4Linux2 Compressed A/V",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "209":{
+    "config":[],
+    "name":"SDP",
+    "category":"Stream output",
+    "longtext":"Session Description Protocol",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "241":{
+    "config":[],
+    "name":"pva",
+    "category":"Stream output",
+    "longtext":"PVA demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "290":{
+    "config":[],
+    "name":"dts",
+    "category":"Stream output",
+    "longtext":"DTS parser",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "354":{
+    "config":[],
+    "name":"i422_yuy2_sse2",
+    "category":"Stream output",
+    "longtext":"SSE2 conversions from I422 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "73":{
+    "config":[],
+    "name":"Video memory",
+    "category":"Video",
+    "longtext":"Video memory output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "89":{
+    "config":[],
+    "name":"Set Lang",
+    "category":"Stream output",
+    "longtext":"Change the language of an elementary stream",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "105":{
+    "config":{
+      "mirror-split":{
+        "Horizontal":1,
+        "Vertical":0
+      },
+      "mirror-direction":{
+        "Left to right/Top to bottom":0,
+        "Right to left/Bottom to top":1
+      }
+    },
+    "name":"Mirror video",
+    "category":"Stream output",
+    "longtext":"Mirror video filter",
+    "help":"Splits video in two same parts, like in a mirror",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "121":{
+    "config":{
+      "ball-edge-visible":true,
+      "ball-color":{
+        "White":"white",
+        "Green":"green",
+        "Blue":"blue",
+        "Red":"red"
+      },
+      "ball-size":10,
+      "ball-speed":4,
+      "ball-gradient-threshold":40
+    },
+    "name":"Ball",
+    "category":"Stream output",
+    "longtext":"Ball video filter",
+    "help":"Augmented reality ball game",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "146":{
+    "config":{
+      "logo-delay":1000,
+      "logo-file":"",
+      "logo-repeat":-1,
+      "logo-y":-1,
+      "logo-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "logo-x":-1,
+      "logo-opacity":255
+    },
+    "name":"Logo overlay",
+    "category":"Stream output",
+    "longtext":"Logo sub source",
+    "help":"Use a local picture as logo on the video",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "178":{
+    "config":{
+      "shm-fps":10,
+      "shm-width":800,
+      "shm-depth":{
+        "8 bits":8,
+        "16 bits":16,
+        "32 bits":32,
+        "15 bits":15,
+        "24 bits":24
+      },
+      "shm-height":480
+    },
+    "name":"Framebuffer input",
+    "category":"Stream output",
+    "longtext":"Shared memory framebuffer",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "210":{
+    "config":{
+      "cddb-port":8880,
+      "cddb-server":"freedb.freedb.org"
+    },
+    "name":"Audio CD",
+    "category":"Stream output",
+    "longtext":"Audio CD input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "242":{
+    "config":[],
+    "name":"smf",
+    "category":"Stream output",
+    "longtext":"SMF demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "292":{
+    "config":[],
+    "name":"rawvideo",
+    "category":"Stream output",
+    "longtext":"Pseudo raw video decoder",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "356":{
+    "config":[],
+    "name":"export",
+    "category":"Stream output",
+    "longtext":"export"
+  },
+  "293":{
+    "config":[],
+    "name":"rawvideo",
+    "category":"Stream output",
+    "longtext":"Pseudo raw video packetizer",
+    "capability":"packetizer",
+    "subcategory":"Video codecs"
+  },
+  "357":{
+    "config":[],
+    "name":"export",
+    "category":"Stream output",
+    "longtext":"HTML playlist export",
+    "capability":"playlist export"
+  },
+  "147":{
+    "config":[],
+    "name":"Logo overlay",
+    "category":"Stream output",
+    "longtext":"Logo video filter",
+    "capability":"video filter2",
+    "subcategory":"Subtitles/OSD"
+  },
+  "179":{
+    "config":[],
+    "name":"dc1394",
+    "category":"Stream output",
+    "longtext":"dc1394 input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "211":{
+    "config":[],
+    "name":"Attachment",
+    "category":"Stream output",
+    "longtext":"Attachment input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "243":{
+    "config":{
+      "vc1-fps":25
+    },
+    "name":"VC-1",
+    "category":"Stream output",
+    "longtext":"VC1 video demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "294":{
+    "config":[],
+    "name":"libmpeg2",
+    "category":"Stream output",
+    "longtext":"MPEG I/II video decoder (using libmpeg2)",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "358":{
+    "config":[],
+    "name":"export",
+    "category":"Stream output",
+    "longtext":"XSPF playlist export",
+    "capability":"playlist export"
+  },
+  "37":{
+    "config":{
+      "spatializer-wet":3,
+      "spatializer-roomsize":1.0499999523163,
+      "spatializer-damp":1,
+      "spatializer-width":10,
+      "spatializer-dry":2
+    },
+    "name":"Spatializer",
+    "longtext":"Audio Spatializer",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "45":{
+    "config":{
+      "sap-strict":false,
+      "sap-timeout":1800,
+      "sap-parse":true
+    },
+    "name":"SAP",
+    "longtext":"Network streams (SAP)",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "53":{
+    "config":[],
+    "name":"Audio capture",
+    "category":"Playlist",
+    "longtext":"Audio capture (PulseAudio)",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "61":{
+    "config":[],
+    "name":"Podcast",
+    "category":"Playlist",
+    "longtext":"Podcasts",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "74":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Video",
+    "longtext":"Dummy font renderer",
+    "capability":"text renderer",
+    "subcategory":"Output modules"
+  },
+  "90":{
+    "config":[],
+    "name":"stream_out_description",
+    "category":"Stream output",
+    "longtext":"Description stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "106":{
+    "config":{
+      "mosaic-keep-aspect-ratio":false,
+      "mosaic-delay":0,
+      "mosaic-height":100,
+      "mosaic-order":"",
+      "mosaic-cols":2,
+      "mosaic-rows":2,
+      "mosaic-alpha":255,
+      "mosaic-width":100,
+      "mosaic-offsets":"",
+      "mosaic-align":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "mosaic-xoffset":0,
+      "mosaic-keep-picture":false,
+      "mosaic-borderw":0,
+      "mosaic-position":{
+        "fixed":1,
+        "auto":0,
+        "offsets":2
+      },
+      "mosaic-borderh":0,
+      "mosaic-yoffset":0
+    },
+    "name":"Mosaic",
+    "category":"Stream output",
+    "longtext":"Mosaic video sub source",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "122":{
+    "config":{
+      "transform-type":{
+        "Rotate by 90 degrees":"90",
+        "Rotate by 270 degrees":"270",
+        "Rotate by 180 degrees":"180",
+        "Flip vertically":"vflip",
+        "Flip horizontally":"hflip"
+      }
+    },
+    "name":"Transformation",
+    "category":"Stream output",
+    "longtext":"Video transformation filter",
+    "help":"Rotate or flip the video",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "148":{
+    "config":{
+      "croppadd-cropbottom":0,
+      "croppadd-croptop":0,
+      "croppadd-cropleft":0,
+      "croppadd-paddbottom":0,
+      "croppadd-paddtop":0,
+      "croppadd-cropright":0,
+      "croppadd-paddleft":0,
+      "croppadd-paddright":0
+    },
+    "name":"Cropadd",
+    "category":"Stream output",
+    "longtext":"Video scaling filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "180":{
+    "config":{
+      "screen-left":0,
+      "screen-fps":2,
+      "screen-top":0,
+      "screen-follow-mouse":false,
+      "screen-height":0,
+      "screen-width":0
+    },
+    "name":"Screen",
+    "category":"Stream output",
+    "longtext":"Screen capture (with X11/XCB)",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "212":{
+    "config":[],
+    "name":"Zip",
+    "category":"Stream output",
+    "longtext":"Zip files filter",
+    "capability":"stream_filter",
+    "subcategory":"Access modules"
+  },
+  "244":{
+    "config":[],
+    "name":"TY",
+    "category":"Stream output",
+    "longtext":"TY Stream audio/video demux",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "296":{
+    "config":[],
+    "name":"a52",
+    "category":"Stream output",
+    "longtext":"A/52 audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "360":{
+    "config":[],
+    "name":"export",
+    "category":"Stream output",
+    "longtext":"M3U playlist export",
+    "capability":"playlist export"
+  },
+  "407":{
+    "config":{
+      "qt-embedded-open":false,
+      "qt-recentplay-filter":"",
+      "qt-pause-minimized":true,
+      "qt-minimal-view":false,
+      "qt-fs-controller":true,
+      "qt-updates-days":3,
+      "qt-start-minimized":false,
+      "qt-bgcone":true,
+      "qt-slider-colours":"153;210;153;20;210;20;255;199;15;245;39;29",
+      "qt-name-in-title":true,
+      "qt-system-tray":true,
+      "qt-error-dialogs":true,
+      "qt-autosave-volume":true,
+      "qt-video-autoresize":true,
+      "qt-autoload-extensions":true,
+      "qt-notification":true,
+      "qt-advanced-pref":false,
+      "qt-icon-change":true,
+      "qt-recentplay":true,
+      "qt-updates-notif":true,
+      "qt-bgcone-expands":false,
+      "qt-fs-opacity":0.80000001192093,
+      "qt-fullscreen-screennumber":-1,
+      "qt-opacity":1
+    },
+    "name":"Qt",
+    "category":"Advanced",
+    "longtext":"Qt interface",
+    "capability":"interface",
+    "subcategory":"Main interfaces"
+  },
+  "403":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "399":{
+    "config":[],
+    "name":"Lua Meta Reader",
+    "category":"Advanced",
+    "longtext":"Read meta data using lua scripts",
+    "capability":"meta reader",
+    "subcategory":"Control interfaces"
+  },
+  "398":{
+    "config":[],
+    "name":"Lua Playlist",
+    "category":"Advanced",
+    "longtext":"Lua Playlist Parser Interface",
+    "capability":"demux",
+    "subcategory":"Control interfaces"
+  },
+  "297":{
+    "config":[],
+    "name":"cvdsub",
+    "category":"Stream output",
+    "longtext":"CVD subtitle decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "361":{
+    "config":[],
+    "name":"Stats",
+    "category":"Stream output",
+    "longtext":"Stats encoder function",
+    "capability":"encoder"
+  },
+  "395":{
+    "config":[],
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua SD Module",
+    "capability":"services_discovery",
+    "subcategory":"Control interfaces"
+  },
+  "391":{
+    "config":{
+      "lua-intf":"dummy",
+      "telnet-port":4212,
+      "telnet-host":"localhost",
+      "lua-config":"",
+      "telnet-password":"admin",
+      "http-index":false
+    },
+    "name":"Lua",
+    "category":"Advanced",
+    "longtext":"Lua interpreter",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "149":{
+    "config":[],
+    "name":"chain",
+    "category":"Stream output",
+    "longtext":"Video filtering using a chain of video filter modules",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "181":{
+    "config":{
+      "vdr-chapter-offset":0,
+      "vdr-fps":25
+    },
+    "name":"VDR",
+    "category":"Stream output",
+    "longtext":"VDR recordings",
+    "help":"Support for VDR recordings (http://www.tvdr.de/).",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "213":{
+    "config":[],
+    "name":"Zip",
+    "category":"Stream output",
+    "longtext":"Zip access",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "245":{
+    "config":[],
+    "name":"aiff",
+    "category":"Stream output",
+    "longtext":"AIFF demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "298":{
+    "config":[],
+    "name":"cvdsub",
+    "category":"Stream output",
+    "longtext":"Chaoji VCD subtitle packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "362":{
+    "config":[],
+    "name":"Stats",
+    "category":"Stream output",
+    "longtext":"Stats demux function",
+    "capability":"demux"
+  },
+  "387":{
+    "config":[],
+    "name":"i422_yuy2_mmx",
+    "category":"Advanced",
+    "longtext":"MMX conversions from I422 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv",
+    "capability":"video filter2",
+    "subcategory":"Muxers"
+  },
+  "383":{
+    "config":[],
+    "name":"mux_dummy",
+    "category":"Advanced",
+    "longtext":"Dummy/Raw muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "382":{
+    "config":{
+      "sout-mp4-faststart":true
+    },
+    "name":"MP4",
+    "category":"Advanced",
+    "longtext":"MP4/MOV muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "381":{
+    "config":{
+      "sout-ts-pid-video":0,
+      "sout-ts-crypt-video":true,
+      "sout-ts-es-id-pid":false,
+      "sout-ts-bmin":0,
+      "sout-ts-pcr":70,
+      "sout-ts-alignment":true,
+      "sout-ts-pid-pmt":0,
+      "sout-ts-pid-audio":0,
+      "sout-ts-shaping":200,
+      "sout-ts-pid-spu":0,
+      "sout-ts-csa-pkt":188,
+      "sout-ts-csa-use":"1",
+      "sout-ts-bmax":0,
+      "sout-ts-dts-delay":400,
+      "sout-ts-crypt-audio":true,
+      "sout-ts-tsid":0,
+      "sout-ts-use-key-frames":false
+    },
+    "name":"MPEG-TS",
+    "category":"Advanced",
+    "longtext":"TS muxer (libdvbpsi)",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "379":{
+    "config":[],
+    "name":"mux_wav",
+    "category":"Advanced",
+    "longtext":"WAV muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "239":{
+    "config":{
+      "ps-trust-timestamps":true
+    },
+    "name":"PS",
+    "category":"Stream output",
+    "longtext":"MPEG-PS demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "75":{
+    "config":{
+      "freetype-fontsize":0,
+      "freetype-outline-opacity":255,
+      "freetype-outline-thickness":{
+        "Thin":2,
+        "Thick":6,
+        "Normal":4,
+        "None":0
+      },
+      "freetype-font":"",
+      "freetype-background-color":"",
+      "freetype-opacity":255,
+      "freetype-shadow-opacity":128,
+      "freetype-yuvp":false,
+      "freetype-shadow-color":"",
+      "freetype-outline-color":"",
+      "freetype-rel-fontsize":{
+        "Small":18,
+        "Larger":6,
+        "Large":12,
+        "Normal":16,
+        "Smaller":20
+      },
+      "freetype-background-opacity":0,
+      "freetype-shadow-distance":0.059999998658895,
+      "freetype-bold":false,
+      "freetype-shadow-angle":-45,
+      "freetype-color":""
+    },
+    "name":"Text renderer",
+    "category":"Video",
+    "longtext":"Freetype2 font renderer",
+    "capability":"text renderer",
+    "subcategory":"Subtitles/OSD"
+  },
+  "91":{
+    "config":{
+      "sout-bridge-in-placeholder-switch-on-iframe":true,
+      "sout-bridge-in-delay":0,
+      "sout-bridge-out-id":0,
+      "sout-bridge-in-placeholder":false,
+      "sout-bridge-out-in-name":"default",
+      "sout-bridge-in-placeholder-delay":200,
+      "sout-bridge-in-name":"default",
+      "sout-bridge-in-id-offset":8192
+    },
+    "name":"Bridge",
+    "category":"Stream output",
+    "longtext":"Bridge stream output",
+    "subcategory":"Sout stream"
+  },
+  "107":{
+    "config":{
+      "extract-component":{
+        "Green":65280,
+        "Blue":255,
+        "Red":16711680
+      }
+    },
+    "name":"Extract",
+    "category":"Stream output",
+    "longtext":"Extract RGB component video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "123":{
+    "config":{
+      "gaussianblur-sigma":2
+    },
+    "name":"Gaussian Blur",
+    "category":"Stream output",
+    "longtext":"Gaussian blur video filter",
+    "help":"Add a blurring effect",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "150":{
+    "config":[],
+    "name":"blend",
+    "category":"Stream output",
+    "longtext":"Video pictures blending",
+    "capability":"video blending",
+    "subcategory":"Filters"
+  },
+  "182":{
+    "config":{
+      "dvdread-angle":1
+    },
+    "name":"DVD without menus",
+    "category":"Stream output",
+    "longtext":"DVDRead Input (no menu support)",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "214":{
+    "config":[],
+    "name":"VCD",
+    "category":"Stream output",
+    "longtext":"VCD input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "246":{
+    "config":[],
+    "name":"nuv",
+    "category":"Stream output",
+    "longtext":"Nuv demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "300":{
+    "config":[],
+    "name":"Schroedinger",
+    "category":"Stream output",
+    "longtext":"Dirac video encoder using libschroedinger",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "364":{
+    "config":[],
+    "name":"inhibit",
+    "category":"Stream output",
+    "longtext":"Power Management Inhibitor",
+    "capability":"interface"
+  },
+  "263":{
+    "config":{
+      "sub-delay":0,
+      "sub-fps":0,
+      "sub-type":{
+        "sami":"sami",
+        "subrip":"subrip",
+        "dvdsubtitle":"dvdsubtitle",
+        "aqt":"aqt",
+        "subviewer":"subviewer",
+        "ssa2-4":"ssa2-4",
+        "ass":"ass",
+        "pjs":"pjs",
+        "jacosub":"jacosub",
+        "auto":"auto",
+        "subviewer1":"subviewer1",
+        "dks":"dks",
+        "mpsub":"mpsub",
+        "microdvd":"microdvd",
+        "realtext":"realtext",
+        "ssa1":"ssa1",
+        "psb":"psb",
+        "mpl2":"mpl2",
+        "vplayer":"vplayer"
+      }
+    },
+    "name":"Subtitles",
+    "category":"Stream output",
+    "longtext":"Text subtitles parser",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "287":{
+    "config":[],
+    "name":"Speex",
+    "category":"Stream output",
+    "longtext":"Speex audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "375":{
+    "config":[],
+    "name":"osd_parser",
+    "category":"Advanced",
+    "longtext":"osd_parser",
+    "subcategory":"Advanced settings"
+  },
+  "302":{
+    "config":[],
+    "name":"Theora",
+    "category":"Stream output",
+    "longtext":"Theora video encoder",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "311":{
+    "config":[],
+    "name":"stl",
+    "category":"Stream output",
+    "longtext":"EBU STL subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "319":{
+    "config":{
+      "dummy-save-es":false
+    },
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dummy decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "301":{
+    "config":{
+      "sout-theora-quality":2
+    },
+    "name":"Theora",
+    "category":"Stream output",
+    "longtext":"Theora video decoder",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "365":{
+    "config":{
+      "rtsp-raw-mux":"ts",
+      "rtsp-throttle-users":0,
+      "rtsp-session-timeout":5
+    },
+    "name":"RTSP VoD",
+    "category":"Stream output",
+    "longtext":"RTSP VoD server",
+    "capability":"vod server",
+    "subcategory":"VOD"
+  },
+  "371":{
+    "config":{
+      "syslog-facility":{
+        "user":"user",
+        "local5":"local5",
+        "local1":"local1",
+        "local4":"local4",
+        "local0":"local0",
+        "local6":"local6",
+        "local7":"local7",
+        "local2":"local2",
+        "local3":"local3",
+        "daemon":"daemon"
+      },
+      "log-verbose":-1,
+      "logmode":{
+        "HTML":"html",
+        "Text":"text",
+        "syslog":"syslog"
+      },
+      "logfile":""
+    },
+    "name":"Logging",
+    "category":"Stream output",
+    "longtext":"File logging",
+    "capability":"interface",
+    "subcategory":"Advanced settings"
+  },
+  "343":{
+    "config":{
+      "sout-udp-caching":300,
+      "sout-udp-group":1
+    },
+    "name":"UDP",
+    "category":"Stream output",
+    "longtext":"UDP stream output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "151":{
+    "config":[],
+    "name":"float32_mixer",
+    "category":"Stream output",
+    "longtext":"Float32 audio mixer",
+    "capability":"audio mixer",
+    "subcategory":"Miscellaneous"
+  },
+  "183":{
+    "config":[],
+    "name":"PulseAudio",
+    "category":"Stream output",
+    "longtext":"PulseAudio input",
+    "help":"Pass pulse:// to open the default PulseAudio source, or pulse://SOURCE to open a specific source named SOURCE.",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "215":{
+    "config":{
+      "srtp-key":"",
+      "srtp-salt":"",
+      "rtp-dynamic-pt":{
+        "Theora Encoded Video":"theora"
+      },
+      "rtp-max-src":1,
+      "rtp-timeout":5,
+      "rtcp-port":0,
+      "rtp-max-dropout":3000,
+      "rtp-max-misorder":100
+    },
+    "name":"RTP",
+    "category":"Stream output",
+    "longtext":"Real-Time Protocol (RTP) input",
+    "capability":"access_demux",
+    "subcategory":"Demuxers"
+  },
+  "247":{
+    "config":[],
+    "name":"xa",
+    "category":"Stream output",
+    "longtext":"XA demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "19":{
+    "config":[],
+    "name":"ugly_resampler",
+    "longtext":"Nearest-neighbor audio resampler",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "23":{
+    "config":[],
+    "name":"Dolby Surround decoder",
+    "longtext":"Simple decoder for Dolby Surround encoded streams",
+    "capability":"audio filter",
+    "subcategory":"Audio codecs"
+  },
+  "27":{
+    "config":{
+      "norm-buff-size":20,
+      "norm-max-level":2
+    },
+    "name":"Volume normalizer",
+    "longtext":"Volume normalizer",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "31":{
+    "config":{
+      "compressor-attack":25,
+      "compressor-ratio":8,
+      "compressor-makeup-gain":7,
+      "compressor-release":100,
+      "compressor-knee":2.5,
+      "compressor-threshold":-11,
+      "compressor-rms-peak":0
+    },
+    "name":"Compressor",
+    "longtext":"Dynamic range compressor",
+    "capability":"audio filter",
+    "subcategory":"Filters"
+  },
+  "38":{
+    "config":{
+      "src-converter-type":{
+        "Sinc function (medium quality)":1,
+        "Zero Order Hold (fastest)":3,
+        "Sinc function (best quality)":0,
+        "Linear (fastest)":4,
+        "Sinc function (fast)":2
+      }
+    },
+    "name":"SRC resampler",
+    "longtext":"Secret Rabbit Code (libsamplerate) resampler",
+    "capability":"audio filter",
+    "subcategory":"Miscellaneous"
+  },
+  "46":{
+    "config":[],
+    "name":"SAP",
+    "longtext":"SDP Descriptions parser",
+    "capability":"demux",
+    "subcategory":"Services discovery"
+  },
+  "54":{
+    "config":[],
+    "name":"Video",
+    "category":"Playlist",
+    "longtext":"My Videos",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "62":{
+    "config":{
+      "fbdev":"",
+      "fb-tty":true,
+      "fb-hw-accel":true,
+      "fb-mode":4
+    },
+    "name":"Framebuffer",
+    "category":"Playlist",
+    "longtext":"GNU/Linux framebuffer video output",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "76":{
+    "config":{
+      "svg-template-file":""
+    },
+    "name":"svg",
+    "category":"Subtitles codecs",
+    "longtext":"svg",
+    "capability":"text renderer",
+    "subcategory":"Subtitles/OSD"
+  },
+  "92":{
+    "config":[],
+    "name":"Bridge",
+    "category":"Stream output",
+    "longtext":"Bridge stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "108":{
+    "config":[],
+    "name":"Color inversion",
+    "category":"Stream output",
+    "longtext":"Invert video filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "124":{
+    "config":{
+      "bluescreen-u":120,
+      "bluescreen-ut":17,
+      "bluescreen-v":90,
+      "bluescreen-vt":17
+    },
+    "name":"Bluescreen",
+    "category":"Stream output",
+    "longtext":"Bluescreen video filter",
+    "help":"This effect, also known as \"greenscreen\" or \"chroma key\" blends the \"blue parts\" of the foreground image of the mosaic on the background (like weather forecasts). You can choose the \"key\" color for blending (blue by default).",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "152":{
+    "config":[],
+    "name":"fixed32_mixer",
+    "category":"Stream output",
+    "longtext":"Fixed-point audio mixer",
+    "capability":"audio mixer",
+    "subcategory":"Miscellaneous"
+  },
+  "184":{
+    "config":[],
+    "name":"TCP",
+    "category":"Stream output",
+    "longtext":"TCP input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "216":{
+    "config":{
+      "mms-timeout":5000,
+      "mms-maxbitrate":0,
+      "mms-all":false
+    },
+    "name":"MMS",
+    "category":"Stream output",
+    "longtext":"Microsoft Media Server (MMS) input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "248":{
+    "config":[],
+    "name":"TTA",
+    "category":"Stream output",
+    "longtext":"TTA demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "304":{
+    "config":[],
+    "name":"araw",
+    "category":"Stream output",
+    "longtext":"Raw/Log Audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "368":{
+    "config":{
+      "lastfm-password":"",
+      "scrobbler-url":"post.audioscrobbler.com",
+      "lastfm-username":""
+    },
+    "name":"Audioscrobbler",
+    "category":"Stream output",
+    "longtext":"Submission of played songs to last.fm",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "351":{
+    "config":{
+      "rc-fake-tty":false,
+      "rc-show-pos":false
+    },
+    "name":"RC",
+    "category":"Stream output",
+    "longtext":"Remote control interface",
+    "capability":"interface",
+    "subcategory":"Main interfaces"
+  },
+  "367":{
+    "config":[],
+    "name":"xscreensaver",
+    "category":"Stream output",
+    "longtext":"X Screensaver disabler",
+    "capability":"inhibit",
+    "subcategory":"VOD"
+  },
+  "366":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"libc memcpy",
+    "capability":"memcpy",
+    "subcategory":"VOD"
+  },
+  "363":{
+    "config":[],
+    "name":"Stats",
+    "category":"Stream output",
+    "longtext":"Stats decoder function",
+    "capability":"decoder"
+  },
+  "359":{
+    "config":[],
+    "name":"export",
+    "category":"Stream output",
+    "longtext":"M3U8 playlist export",
+    "capability":"playlist export"
+  },
+  "355":{
+    "config":[],
+    "name":"i420_rgb_sse2",
+    "category":"Stream output",
+    "longtext":"SSE2 I420,IYUV,YV12 to RV15,RV16,RV24,RV32 conversions",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "305":{
+    "config":[],
+    "name":"araw",
+    "category":"Stream output",
+    "longtext":"Raw audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "369":{
+    "config":[],
+    "name":"xml",
+    "category":"Stream output",
+    "longtext":"XML Parser (using libxml2)",
+    "capability":"xml",
+    "subcategory":"Control interfaces"
+  },
+  "350":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dummy interface",
+    "capability":"interface",
+    "subcategory":"Advanced settings"
+  },
+  "347":{
+    "config":{
+      "gestures-button":{
+        "Right":"right",
+        "Left":"left",
+        "Middle":"middle"
+      },
+      "gestures-threshold":30
+    },
+    "name":"Gestures",
+    "category":"Stream output",
+    "longtext":"Mouse gestures control interface",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "153":{
+    "config":[],
+    "name":"Telepathy",
+    "category":"Stream output",
+    "longtext":"Telepathy \"Now Playing\" (MissionControl)",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "185":{
+    "config":{
+      "ftp-pwd":"anonymous@example.com",
+      "ftp-account":"anonymous",
+      "ftp-user":"anonymous"
+    },
+    "name":"FTP",
+    "category":"Stream output",
+    "longtext":"FTP input",
+    "capability":"access",
+    "subcategory":"Access output"
+  },
+  "217":{
+    "config":[],
+    "name":"BD",
+    "category":"Stream output",
+    "longtext":"Blu-Ray Disc Input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "249":{
+    "config":{
+      "rawdv-hurry-up":false
+    },
+    "name":"DV",
+    "category":"Stream output",
+    "longtext":"DV (Digital Video) demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "306":{
+    "config":[],
+    "name":"cdg",
+    "category":"Stream output",
+    "longtext":"CDG video decoder",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "370":{
+    "config":[],
+    "name":"xml",
+    "category":"Stream output",
+    "longtext":"XML Parser (using libxml2)",
+    "capability":"xml reader",
+    "subcategory":"Control interfaces"
+  },
+  "339":{
+    "config":{
+      "sout-file-append":false,
+      "sout-file-sync":false
+    },
+    "name":"File",
+    "category":"Stream output",
+    "longtext":"File stream output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "335":{
+    "config":[],
+    "name":"Subtitles (advanced)",
+    "category":"Stream output",
+    "longtext":"Subtitle renderers using libass",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "334":{
+    "config":[],
+    "name":"adpcm",
+    "category":"Stream output",
+    "longtext":"ADPCM audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "331":{
+    "config":[],
+    "name":"Dummy",
+    "category":"Stream output",
+    "longtext":"Dummy encoder",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "327":{
+    "config":{
+      "sout-vorbis-max-bitrate":0,
+      "sout-vorbis-cbr":false,
+      "sout-vorbis-min-bitrate":0,
+      "sout-vorbis-quality":0
+    },
+    "name":"Vorbis",
+    "category":"Stream output",
+    "longtext":"Vorbis audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "323":{
+    "config":[],
+    "name":"lpcm",
+    "category":"Stream output",
+    "longtext":"Linear PCM audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "77":{
+    "config":{
+      "sout-transcode-fps":0,
+      "sout-transcode-maxheight":0,
+      "sout-transcode-channels":0,
+      "sout-transcode-senc":"",
+      "sout-transcode-venc":"",
+      "sout-transcode-scale":0,
+      "sout-transcode-hurry-up":true,
+      "sout-transcode-vfilter":"",
+      "sout-transcode-audio-sync":false,
+      "sout-transcode-osd":false,
+      "sout-transcode-samplerate":0,
+      "sout-transcode-aenc":"",
+      "sout-transcode-soverlay":false,
+      "sout-transcode-height":0,
+      "sout-transcode-ab":96,
+      "sout-transcode-width":0,
+      "sout-transcode-deinterlace":false,
+      "sout-transcode-high-priority":false,
+      "sout-transcode-deinterlace-module":{
+        "deinterlace":"deinterlace",
+        "ffmpeg-deinterlace":"ffmpeg-deinterlace"
+      },
+      "sout-transcode-threads":0,
+      "sout-transcode-vb":0,
+      "sout-transcode-sfilter":"",
+      "sout-transcode-maxwidth":0,
+      "sout-transcode-afilter":""
+    },
+    "name":"Transcode",
+    "category":"Subtitles codecs",
+    "longtext":"Transcode stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "93":{
+    "config":[],
+    "name":"Bridge",
+    "category":"Stream output",
+    "longtext":"Bridge stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "109":{
+    "config":{
+      "atmo-usepausecolor":false,
+      "atmo-zones-lr":1,
+      "atmo-gradient_zone_3":"",
+      "atmo-ecolor-blue":192,
+      "atmo-zones-top":1,
+      "atmo-white-green":255,
+      "atmo-zone-summary":false,
+      "atmo-efadesteps":50,
+      "atmo-ecolor-red":192,
+      "atmo-channels":"",
+      "atmo-fadesteps":50,
+      "atmo-filtermode":{
+        "Combined":1,
+        "No Filtering":0,
+        "Percent":2
+      },
+      "atmo-framedelay":18,
+      "atmo-pcolor-blue":192,
+      "atmo-satwinsize":3,
+      "atmo-dmx-channels":5,
+      "atmo-channel_2":{
+        "Zone 2:bottom":2,
+        "disabled":-1,
+        "Zone 4:summary":4,
+        "Zone 0:top":0,
+        "Zone 1:right":1,
+        "Zone 3:left":3
+      },
+      "atmo-ecolor-green":192,
+      "atmo-momo-channels":3,
+      "atmo-device":{
+        "Quattro AtmoLight":2,
+        "Classic AtmoLight":1,
+        "fnordlicht":5,
+        "DMX":3,
+        "MoMoLight":4
+      },
+      "atmo-pcolor-green":0,
+      "atmo-percentnew":50,
+      "atmo-darknesslimit":3,
+      "atmo-edgeweightning":3,
+      "atmo-showdots":false,
+      "atmo-height":48,
+      "atmo-channel_3":{
+        "Zone 2:bottom":2,
+        "disabled":-1,
+        "Zone 4:summary":4,
+        "Zone 0:top":0,
+        "Zone 1:right":1,
+        "Zone 3:left":3
+      },
+      "atmo-serialdev":"/dev/ttyUSB0",
+      "atmo-gradient_path":"",
+      "atmo-pcolor-red":0,
+      "atmo-white-blue":255,
+      "atmo-width":64,
+      "atmo-gradient_zone_4":"",
+      "atmo-meanthreshold":40,
+      "atmo-huewinsize":3,
+      "atmo-gradient_zone_1":"",
+      "atmo-zones-bottom":1,
+      "atmo-gradient_zone_2":"",
+      "atmo-meanlength":300,
+      "atmo-fnordlicht-amount":2,
+      "atmo-white-red":255,
+      "atmo-channel_4":{
+        "Zone 2:bottom":2,
+        "disabled":-1,
+        "Zone 4:summary":4,
+        "Zone 0:top":0,
+        "Zone 1:right":1,
+        "Zone 3:left":3
+      },
+      "atmo-channel_1":{
+        "Zone 2:bottom":2,
+        "disabled":-1,
+        "Zone 4:summary":4,
+        "Zone 0:top":0,
+        "Zone 1:right":1,
+        "Zone 3:left":3
+      },
+      "atmo-channel_0":{
+        "Zone 2:bottom":2,
+        "disabled":-1,
+        "Zone 4:summary":4,
+        "Zone 0:top":0,
+        "Zone 1:right":1,
+        "Zone 3:left":3
+      },
+      "atmo-gradient_zone_0":"",
+      "atmo-whiteadj":true,
+      "atmo-brightness":100,
+      "atmo-dmx-chbase":"0,3,6,9,12"
+    },
+    "name":"AtmoLight",
+    "category":"Stream output",
+    "longtext":"AtmoLight Filter",
+    "help":"This module allows controlling an so called AtmoLight device connected to your computer.\nAtmoLight is the homegrown version of what Philips calls AmbiLight.\nIf you need further information feel free to visit us at\n\nhttp://www.vdr-wiki.de/wiki/index.php/Atmo-plugin\nhttp://www.vdr-wiki.de/wiki/index.php/AtmoWin\n\nYou can find there detailed descriptions on how to build it for yourself and where to get the required parts.\nYou can also have a look at pictures and some movies showing such a device in live action.",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "125":{
+    "config":{
+      "clone-count":2
+    },
+    "name":"Clone",
+    "category":"Stream output",
+    "longtext":"Clone video filter",
+    "help":"Duplicate your video to multiple windows and/or video output modules",
+    "capability":"video splitter",
+    "subcategory":"Filters"
+  },
+  "154":{
+    "config":{
+      "notify-timeout":4000
+    },
+    "name":"Notify",
+    "category":"Stream output",
+    "longtext":"LibNotify Notification Plugin",
+    "capability":"interface",
+    "subcategory":"Control interfaces"
+  },
+  "186":{
+    "config":[],
+    "name":"FTP",
+    "category":"Stream output",
+    "longtext":"FTP upload output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "218":{
+    "config":{
+      "shoutcast-show-adult":false,
+      "playlist-skip-ads":true
+    },
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"Playlist",
+    "subcategory":"Demuxers"
+  },
+  "250":{
+    "config":{
+      "demuxdump-file":"",
+      "demuxdump-append":false
+    },
+    "name":"Dump",
+    "category":"Stream output",
+    "longtext":"File dumper",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "308":{
+    "config":[],
+    "name":"SVCD subtitles",
+    "category":"Stream output",
+    "longtext":"Philips OGT (SVCD subtitle) packetizer",
+    "capability":"packetizer",
+    "subcategory":"Subtitles codecs"
+  },
+  "372":{
+    "config":[],
+    "name":"XDG-screensaver",
+    "category":"Stream output",
+    "longtext":"XDG screen saver inhibition",
+    "capability":"inhibit",
+    "subcategory":"Advanced settings"
+  },
+  "318":{
+    "config":[],
+    "name":"faad",
+    "category":"Stream output",
+    "longtext":"AAC audio decoder (using libfaad2)",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "317":{
+    "config":[],
+    "name":"flac",
+    "category":"Stream output",
+    "longtext":"Flac audio encoder",
+    "capability":"encoder",
+    "subcategory":"Audio codecs"
+  },
+  "315":{
+    "config":{
+      "telx-override-page":-1,
+      "telx-ignore-subtitle-flag":false,
+      "telx-french-workaround":false
+    },
+    "name":"Teletext",
+    "category":"Stream output",
+    "longtext":"Teletext subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "254":{
+    "config":[],
+    "name":"flacsys",
+    "category":"Stream output",
+    "longtext":"FLAC demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "267":{
+    "config":[],
+    "name":"demux_stl",
+    "category":"Stream output",
+    "longtext":"EBU STL subtitles parser",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "291":{
+    "config":[],
+    "name":"dts",
+    "category":"Stream output",
+    "longtext":"DTS audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Subtitles codecs"
+  },
+  "309":{
+    "config":[],
+    "name":"t140",
+    "category":"Stream output",
+    "longtext":"T.140 text encoder",
+    "capability":"encoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "373":{
+    "config":{
+      "gnutls-priorities":{
+        "Normal":"NORMAL",
+        "Secure 256-bits (prioritize 256-bits ciphers)":"SECURE256",
+        "Export (include insecure ciphers)":"EXPORT",
+        "Secure 128-bits (exclude 256-bits ciphers)":"SECURE128",
+        "Performance (prioritize faster ciphers)":"PERFORMANCE"
+      }
+    },
+    "name":"GNU TLS",
+    "category":"Advanced",
+    "longtext":"GNU TLS transport layer security",
+    "capability":"tls client",
+    "subcategory":"Advanced settings"
+  },
+  "303":{
+    "config":[],
+    "name":"Theora",
+    "category":"Stream output",
+    "longtext":"Theora video packetizer",
+    "capability":"packetizer",
+    "subcategory":"Video codecs"
+  },
+  "307":{
+    "config":[],
+    "name":"SVCD subtitles",
+    "category":"Stream output",
+    "longtext":"Philips OGT (SVCD subtitle) decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "155":{
+    "config":[],
+    "name":"i420_rgb",
+    "category":"Stream output",
+    "longtext":"I420,IYUV,YV12 to RGB2,RV15,RV16,RV24,RV32 conversions",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "187":{
+    "config":{
+      "linsys-hdsdi-audio":"0=1,1",
+      "linsys-hdsdi-aspect-ratio":"",
+      "linsys-hdsdi-link":0,
+      "linsys-hdsdi-id-video":0
+    },
+    "name":"HD-SDI",
+    "category":"Stream output",
+    "longtext":"HD-SDI Input",
+    "capability":"access_demux",
+    "subcategory":"Access modules"
+  },
+  "219":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"ZPL playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "251":{
+    "config":{
+      "rawvid-height":0,
+      "rawvid-width":0
+    },
+    "name":"Raw Video",
+    "category":"Stream output",
+    "longtext":"Raw video demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "310":{
+    "config":{
+      "subsdec-autodetect-utf8":true,
+      "subsdec-encoding":{
+        "Baltic (Latin-7)":"ISO-8859-13",
+        "Arabic (Windows-1256)":"Windows-1256",
+        "Celtic (Latin-8)":"ISO-8859-14",
+        "Nordic (Latin-6)":"ISO-8859-10",
+        "Hong-Kong Supplementary (HKSCS)":"Big5-HKSCS",
+        "Default (Windows-1252)":"",
+        "Greek (Windows-1253)":"Windows-1253",
+        "Turkish (ISO 8859-9)":"ISO-8859-9",
+        "Japanese Unix (EUC-JP)":"EUC-JP",
+        "Western European (Latin-9)":"ISO-8859-15",
+        "Ukrainian (KOI8-U)":"KOI8-U",
+        "Hebrew (ISO 8859-8)":"ISO-8859-8",
+        "Baltic (Windows-1257)":"Windows-1257",
+        "Greek (ISO 8859-7)":"ISO-8859-7",
+        "Western European (Windows-1252)":"Windows-1252",
+        "Universal (UTF-8)":"UTF-8",
+        "Vietnamese (Windows-1258)":"Windows-1258",
+        "Simplified Chinese (ISO-2022-CN-EXT)":"ISO-2022-CN-EXT",
+        "Korean (ISO-2022-KR)":"ISO-2022-KR",
+        "Traditional Chinese Unix (EUC-TW)":"ISO-2022-TW",
+        "Vietnamese (VISCII)":"VISCII",
+        "System codeset":"system",
+        "Korean (EUC-KR/CP949)":"CP949",
+        "Japanese (7-bits JIS/ISO-2022-JP-2)":"ISO-2022-JP-2",
+        "Japanese (Shift JIS)":"Shift_JIS",
+        "Eastern European (Windows-1250)":"Windows-1250",
+        "Simplified Chinese Unix (EUC-CN)":"EUC-CN",
+        "Traditional Chinese (Big5)":"Big5",
+        "Eastern European (Latin-2)":"ISO-8859-2",
+        "Universal (little endian UTF-16)":"UTF-16LE",
+        "Arabic (ISO 8859-6)":"ISO-8859-6",
+        "Hebrew (Windows-1255)":"Windows-1255",
+        "Universal (big endian UTF-16)":"UTF-16BE",
+        "South-Eastern European (Latin-10)":"ISO-8859-16",
+        "Thai (Windows-874)":"Windows-874",
+        "Thai (TIS 620-2533/ISO 8859-11)":"ISO-8859-11",
+        "Turkish (Windows-1254)":"Windows-1254",
+        "Universal, Chinese (GB18030)":"GB18030",
+        "Cyrillic (Windows-1251)":"Windows-1251",
+        "Universal (UTF-16)":"UTF-16",
+        "Esperanto (Latin-3)":"ISO-8859-3",
+        "Russian (KOI8-R)":"KOI8-R"
+      },
+      "subsdec-formatted":true,
+      "subsdec-align":{
+        "Right":2,
+        "Center":0,
+        "Left":1
+      }
+    },
+    "name":"Subtitles",
+    "category":"Stream output",
+    "longtext":"Text subtitles decoder",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "374":{
+    "config":[],
+    "name":"GNU TLS",
+    "category":"Advanced",
+    "longtext":"GNU TLS server",
+    "capability":"tls server",
+    "subcategory":"Advanced settings"
+  },
+  "299":{
+    "config":{
+      "sout-schro-downsample-levels":-1,
+      "sout-schro-perceptual-weighting":{
+        "ccir959":"ccir959",
+        "manos_sakrison":"manos_sakrison",
+        "moo":"moo",
+        "none":"none"
+      },
+      "sout-schro-noise-threshold":-1,
+      "sout-schro-quality":-1,
+      "sout-schro-enable-hierarchical-me":-1,
+      "sout-schro-vert-slices":-1,
+      "sout-schro-min-bitrate":-1,
+      "sout-schro-enable-phasecorr-me":-1,
+      "sout-schro-coding-mode":{
+        "force coding frame as separate interlaced fields":"field",
+        "auto - let encoder decide based upon input (Best)":"auto",
+        "force coding frame as single picture":"progressive"
+      },
+      "sout-schro-filter-value":-1,
+      "sout-schro-horiz-slices":-1,
+      "sout-schro-bitrate":-1,
+      "sout-schro-gop-structure":{
+        "No fixed gop structure. A picture can be intra or inter and refer to previous or future pictures.":"adaptive",
+        "Inter pictures refere to previous pictures only":"chained_backref",
+        "Inter pictures can refer to previous or future pictures":"chained_biref",
+        "I-frame only sequence":"intra_only"
+      },
+      "sout-schro-max-bitrate":-1,
+      "sout-schro-mv-precision":{
+        "1":"1",
+        "1/8":"1/8",
+        "1/4":"1/4",
+        "1/2":"1/2"
+      },
+      "sout-schro-chroma-fmt":{
+        "4:2:0":"420",
+        "4:2:2":"422",
+        "4:4:4":"444"
+      },
+      "sout-schro-gop-length":-1,
+      "sout-schro-perceptual-distance":-1,
+      "sout-schro-transform-depth":-1,
+      "sout-schro-rate-control":{
+        "Constant error mode":"constant_error",
+        "Lossless mode":"lossless",
+        "Constant noise threshold mode":"constant_noise_threshold",
+        "Low Delay mode":"low_delay",
+        "Constant bitrate mode (CBR)":"constant_bitrate",
+        "Constant lambda mode":"constant_lambda",
+        "Constant quality mode":"constant_quality"
+      },
+      "sout-schro-motion-block-size":{
+        "medium - use medium motion compensation blocks":"medium",
+        "large - use large motion compensation blocks":"large",
+        "small - use small motion compensation blocks":"small",
+        "automatic - let encoder decide based upon input (Best)":"automatic"
+      },
+      "sout-schro-enable-global-me":-1,
+      "sout-schro-force-profile":{
+        "VC2 Simple Profile":"vc2_simple",
+        "automatic - let encoder decide based upon input (Best)":"auto",
+        "VC2 Main Profile":"vc2_main",
+        "VC2 Low Delay Profile":"vc2_low_delay",
+        "Main Profile":"main"
+      },
+      "sout-schro-motion-block-overlap":{
+        "partial - Motion compensation blocks only partially overlap":"partial",
+        "full - Motion compensation blocks fully overlap":"full",
+        "none - Motion compensation blocks do not overlap":"none",
+        "automatic - let encoder decide based upon input (Best)":"automatic"
+      },
+      "sout-schro-enable-noarith":-1,
+      "sout-schro-enable-scd":-1,
+      "sout-schro-me-combined":-1,
+      "sout-schro-filtering":{
+        "Low Pass Filter":"lowpass",
+        "Gaussian Adaptive Low Pass Filter":"adaptive_gaussian",
+        "Add Noise":"add_noise",
+        "Centre Weighted Median":"center_weighted_median",
+        "Gaussian Low Pass Filter":"gaussian",
+        "No pre-filtering":"none"
+      },
+      "sout-schro-intra-wavelet":{
+        "Deslauriers-Dubuc (9,7)":"desl_dubuc_9_7",
+        "Fidelity filter":"fidelity",
+        "Deslauriers-Dubuc (13,7)":"desl_dubuc_13_7",
+        "Daubechies (9,7) integer approximation":"daub_9_7",
+        "LeGall (5,3)":"le_gall_5_3",
+        "Haar with single shift per level":"haar_1",
+        "Haar with no shift":"haar_0"
+      },
+      "sout-schro-codeblock-size":{
+        "large - use large code blocks":"large",
+        "automatic - let encoder decide based upon input (Best)":"automatic",
+        "medium - use medium sized code blocks":"medium",
+        "small - use small code blocks":"small",
+        "full - One code block per subband":"full"
+      },
+      "sout-schro-enable-multiquant":-1,
+      "sout-schro-inter-wavelet":{
+        "Deslauriers-Dubuc (9,7)":"desl_dubuc_9_7",
+        "Fidelity filter":"fidelity",
+        "Deslauriers-Dubuc (13,7)":"desl_dubuc_13_7",
+        "Daubechies (9,7) integer approximation":"daub_9_7",
+        "LeGall (5,3)":"le_gall_5_3",
+        "Haar with single shift per level":"haar_1",
+        "Haar with no shift":"haar_0"
+      }
+    },
+    "name":"Schroedinger",
+    "category":"Stream output",
+    "longtext":"Dirac video decoder using libschroedinger",
+    "capability":"decoder",
+    "subcategory":"Video codecs"
+  },
+  "295":{
+    "config":[],
+    "name":"a52",
+    "category":"Stream output",
+    "longtext":"A/52 parser",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "39":{
+    "config":[],
+    "name":"Screen capture",
+    "longtext":"Screen capture",
+    "capability":"services_discovery",
+    "subcategory":"Services discovery"
+  },
+  "47":{
+    "config":[],
+    "name":"SAP",
+    "longtext":"Network streams (SAP)",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "55":{
+    "config":[],
+    "name":"Video",
+    "category":"Playlist",
+    "longtext":"My Videos",
+    "capability":"services probe",
+    "subcategory":"Services discovery"
+  },
+  "63":{
+    "config":[],
+    "name":"X11",
+    "category":"Playlist",
+    "longtext":"X11 video output (XCB)",
+    "capability":"vout display",
+    "subcategory":"Output modules"
+  },
+  "78":{
+    "config":{
+      "sout-langfromtelx-page":153,
+      "sout-langfromtelx-magazine":7,
+      "sout-langfromtelx-id":0,
+      "sout-langfromtelx-row":1
+    },
+    "name":"Lang From Telx",
+    "category":"Subtitles codecs",
+    "longtext":"Dynamic language setting from teletext",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "94":{
+    "config":{
+      "sout-record-dst-prefix":""
+    },
+    "name":"Record",
+    "category":"Stream output",
+    "longtext":"Record stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "110":{
+    "config":{
+      "hqdn3d-chroma-spat":3,
+      "hqdn3d-chroma-temp":4.5,
+      "hqdn3d-luma-spat":4,
+      "hqdn3d-luma-temp":6
+    },
+    "name":"HQ Denoiser 3D",
+    "category":"Stream output",
+    "longtext":"High Quality 3D Denoiser filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "126":{
+    "config":{
+      "canvas-height":0,
+      "canvas-width":0,
+      "canvas-padd":true
+    },
+    "name":"Canvas",
+    "category":"Stream output",
+    "longtext":"Canvas video filter",
+    "help":"Automatically resize and pad a video",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "156":{
+    "config":[],
+    "name":"i422_yuy2",
+    "category":"Stream output",
+    "longtext":"Conversions from I422 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv,Y211",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "188":{
+    "config":[],
+    "name":"FFmpeg",
+    "category":"Stream output",
+    "longtext":"FFmpeg access",
+    "capability":"access",
+    "subcategory":"Access output"
+  },
+  "220":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"WPL playlist import",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "252":{
+    "config":[],
+    "name":"nsc",
+    "category":"Stream output",
+    "longtext":"Windows Media NSC metademux",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "312":{
+    "config":[],
+    "name":"aes3",
+    "category":"Stream output",
+    "longtext":"AES3/SMPTE 302M audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "376":{
+    "config":[],
+    "name":"osd_parser",
+    "category":"Advanced",
+    "longtext":"XML OSD configuration importer",
+    "capability":"osd parser",
+    "subcategory":"Advanced settings"
+  },
+  "286":{
+    "config":{
+      "sout-speex-complexity":3,
+      "sout-speex-quality":8,
+      "sout-speex-cbr":false,
+      "sout-speex-mode":{
+        "Ultra-wideband (32kHz)":2,
+        "Narrow-band (8kHz)":0,
+        "Wide-band (16kHz)":1
+      },
+      "sout-speex-max-bitrate":0,
+      "sout-speex-vad":true,
+      "sout-speex-dtx":false
+    },
+    "name":"Speex",
+    "category":"Stream output",
+    "longtext":"Speex audio decoder",
+    "capability":"decoder",
+    "subcategory":"Audio codecs"
+  },
+  "283":{
+    "config":{
+      "sout-x264-merange":16,
+      "sout-x264-keyint":250,
+      "sout-x264-8x8dct":true,
+      "sout-x264-nf":false,
+      "sout-x264-preset":{
+        "faster":"faster",
+        "superfast":"superfast",
+        "placebo":"placebo",
+        "veryfast":"veryfast",
+        "ultrafast":"ultrafast",
+        "":"",
+        "slower":"slower",
+        "veryslow":"veryslow",
+        "slow":"slow",
+        "fast":"fast",
+        "medium":"medium"
+      },
+      "sout-x264-cabac":true,
+      "sout-x264-pass":0,
+      "sout-x264-profile":{
+        "":"",
+        "baseline":"baseline",
+        "main":"main",
+        "high10":"high10",
+        "high":"high"
+      },
+      "sout-x264-slice-max-size":0,
+      "sout-x264-qp":-1,
+      "sout-x264-trellis":1,
+      "sout-x264-qpmax":51,
+      "sout-x264-bframes":3,
+      "sout-x264-chroma-me":true,
+      "sout-x264-ssim":false,
+      "sout-x264-min-keyint":25,
+      "sout-x264-stats":"x264_2pass.log",
+      "sout-x264-qblur":0.5,
+      "sout-x264-tune":{
+        "stillimage":"stillimage",
+        "animation":"animation",
+        "psnr":"psnr",
+        "ssim":"ssim",
+        "fastdecode":"fastdecode",
+        "grain":"grain",
+        "":"",
+        "film":"film",
+        "zerolatency":"zerolatency"
+      },
+      "sout-x264-opengop":{
+        "normal":"normal",
+        "":"",
+        "bluray":"bluray",
+        "none":"none"
+      },
+      "sout-x264-bpyramid":{
+        "normal":"normal",
+        "strict":"strict",
+        "none":"none"
+      },
+      "sout-x264-dct-decimate":true,
+      "sout-x264-aud":false,
+      "sout-x264-level":"0",
+      "sout-x264-intra-refresh":false,
+      "sout-x264-me":{
+        "hex":"hex",
+        "dia":"dia",
+        "tesa":"tesa",
+        "esa":"esa",
+        "umh":"umh"
+      },
+      "sout-x264-scenecut":40,
+      "sout-x264-deadzone-intra":11,
+      "sout-x264-ratetol":1,
+      "sout-x264-crf":23,
+      "sout-x264-vbv-maxrate":0,
+      "sout-x264-b-adapt":1,
+      "sout-x264-mbtree":true,
+      "sout-x264-vbv-bufsize":0,
+      "sout-x264-weightp":2,
+      "sout-x264-direct-8x8":1,
+      "sout-x264-deblock":"0:0",
+      "sout-x264-b-bias":0,
+      "sout-x264-quiet":false,
+      "sout-x264-ref":3,
+      "sout-x264-nr":0,
+      "sout-x264-psy-rd":"1.0:0.0",
+      "sout-x264-psnr":false,
+      "sout-x264-pbratio":1.2999999523163,
+      "sout-x264-mvrange-thread":-1,
+      "sout-x264-verbose":false,
+      "sout-x264-sps-id":0,
+      "sout-x264-mvrange":-1,
+      "sout-x264-asm":true,
+      "sout-x264-non-deterministic":false,
+      "sout-x264-deadzone-inter":21,
+      "sout-x264-fast-pskip":true,
+      "sout-x264-lookahead":40,
+      "sout-x264-mixed-refs":true,
+      "sout-x264-subme":7,
+      "sout-x264-qpmin":10,
+      "sout-x264-slices":0,
+      "sout-x264-weightb":true,
+      "sout-x264-partitions":{
+        "normal":"normal",
+        "all":"all",
+        "slow":"slow",
+        "fast":"fast",
+        "none":"none"
+      },
+      "sout-x264-ipratio":1.3999999761581,
+      "sout-x264-direct":{
+        "temporal":"temporal",
+        "spatial":"spatial",
+        "auto":"auto",
+        "none":"none"
+      },
+      "sout-x264-aq-strength":1,
+      "sout-x264-qcomp":0.60000002384186,
+      "sout-x264-cplxblur":20,
+      "sout-x264-aq-mode":1,
+      "sout-x264-psy":true,
+      "sout-x264-interlaced":false,
+      "sout-x264-slice-max-mbs":0,
+      "sout-x264-vbv-init":0.89999997615814,
+      "sout-x264-qpstep":4,
+      "sout-x264-hrd":{
+        "vbr":"vbr",
+        "":"",
+        "cbr":"cbr",
+        "none":"none"
+      },
+      "sout-x264-chroma-qp-offset":0
+    },
+    "name":"x264",
+    "category":"Stream output",
+    "longtext":"H.264/MPEG4 AVC encoder (x264)",
+    "capability":"encoder",
+    "subcategory":"Video codecs"
+  },
+  "279":{
+    "config":[],
+    "name":"FFmpeg",
+    "category":"Stream output",
+    "longtext":"FFmpeg deinterlace video filter",
+    "capability":"video filter2",
+    "subcategory":"Video codecs"
+  },
+  "275":{
+    "config":[],
+    "name":"MP4",
+    "category":"Stream output",
+    "longtext":"MP4 stream demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "271":{
+    "config":{
+      "es-fps":25
+    },
+    "name":"Audio ES",
+    "category":"Stream output",
+    "longtext":"MPEG-I/II/4 / A52 / DTS / MLP audio",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "270":{
+    "config":{
+      "h264-fps":25
+    },
+    "name":"H264",
+    "category":"Stream output",
+    "longtext":"H264 video demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "313":{
+    "config":[],
+    "name":"aes3",
+    "category":"Stream output",
+    "longtext":"AES3/SMPTE 302M audio packetizer",
+    "capability":"packetizer",
+    "subcategory":"Audio codecs"
+  },
+  "377":{
+    "config":[],
+    "name":"osd_parser",
+    "category":"Advanced",
+    "longtext":"OSD configuration importer",
+    "capability":"osd parser",
+    "subcategory":"Advanced settings"
+  },
+  "259":{
+    "config":[],
+    "name":"GME",
+    "category":"Stream output",
+    "longtext":"Game Music Emu",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "255":{
+    "config":[],
+    "name":"nsv",
+    "category":"Stream output",
+    "longtext":"NullSoft demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "157":{
+    "config":[],
+    "name":"grey_yuv",
+    "category":"Stream output",
+    "longtext":"Conversions from GREY to I420,YUY2",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "189":{
+    "config":[],
+    "name":"libavformat",
+    "category":"Stream output",
+    "longtext":"libavformat access output",
+    "capability":"sout access",
+    "subcategory":"Access output"
+  },
+  "221":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"iTunes Music Library importer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "253":{
+    "config":[],
+    "name":"voc",
+    "category":"Stream output",
+    "longtext":"VOC demuxer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "314":{
+    "config":{
+      "kate-tiger-default-font-effect-strength":0.5,
+      "kate-formatted":true,
+      "kate-tiger-default-font-alpha":255,
+      "kate-tiger-quality":1,
+      "kate-tiger-default-font-color":{
+        "Navy":128,
+        "Red":16711680,
+        "Silver":12632256,
+        "Blue":255,
+        "Fuchsia":16711935,
+        "Teal":32896,
+        "Lime":65280,
+        "Purple":8388736,
+        "Olive":8421376,
+        "White":16777215,
+        "Black":0,
+        "Green":32768,
+        "Aqua":65535,
+        "Yellow":16776960,
+        "Maroon":8388608,
+        "Gray":8421504
+      },
+      "kate-tiger-default-background-alpha":0,
+      "kate-use-tiger":true,
+      "kate-tiger-default-background-color":{
+        "Navy":128,
+        "Red":16711680,
+        "Silver":12632256,
+        "Blue":255,
+        "Fuchsia":16711935,
+        "Teal":32896,
+        "Lime":65280,
+        "Purple":8388736,
+        "Olive":8421376,
+        "White":16777215,
+        "Black":0,
+        "Green":32768,
+        "Aqua":65535,
+        "Yellow":16776960,
+        "Maroon":8388608,
+        "Gray":8421504
+      },
+      "kate-tiger-default-font-desc":"",
+      "kate-tiger-default-font-effect":{
+        "Outline":2,
+        "Shadow":1,
+        "None":0
+      }
+    },
+    "name":"Kate",
+    "category":"Stream output",
+    "longtext":"Kate overlay decoder",
+    "help":"Kate is a codec for text and image based overlays.\nThe Tiger rendering library is needed to render complex Kate streams, but VLC can still render static text and image based subtitles if it is not available.\nNote that changing settings below will not take effect until a new stream is played. This will hopefully be fixed soon.",
+    "capability":"decoder",
+    "subcategory":"Subtitles codecs"
+  },
+  "378":{
+    "config":[],
+    "name":"mux_avi",
+    "category":"Advanced",
+    "longtext":"AVI muxer",
+    "capability":"sout mux",
+    "subcategory":"Muxers"
+  },
+  "223":{
+    "config":[],
+    "name":"Playlist",
+    "category":"Stream output",
+    "longtext":"Google Video Playlist importer",
+    "capability":"demux",
+    "subcategory":"Demuxers"
+  },
+  "207":{
+    "config":[],
+    "name":"GnomeVFS",
+    "category":"Stream output",
+    "longtext":"GnomeVFS input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "191":{
+    "config":{
+      "http-reconnect":false,
+      "http-forward-cookies":true,
+      "http-continuous":false
+    },
+    "name":"HTTP(S)",
+    "category":"Stream output",
+    "longtext":"HTTP input",
+    "capability":"access",
+    "subcategory":"Access modules"
+  },
+  "175":{
+    "config":{
+      "projectm-title-font":"",
+      "projectm-meshx":32,
+      "projectm-meshy":24,
+      "projectm-height":500,
+      "projectm-width":800,
+      "projectm-menu-font":"",
+      "projectm-preset-path":"",
+      "projectm-texture-size":1024
+    },
+    "name":"projectM",
+    "category":"Stream output",
+    "longtext":"libprojectM effect",
+    "capability":"visualization2",
+    "subcategory":"Visualizations"
+  },
+  "159":{
+    "config":[],
+    "name":"i420_yuy2",
+    "category":"Stream output",
+    "longtext":"Conversions from I420,IYUV,YV12 to YUY2,YUNV,YVYU,UYVY,UYNV,Y422,IUYV,cyuv,Y211",
+    "capability":"video filter2",
+    "subcategory":"Control interfaces"
+  },
+  "143":{
+    "config":{
+      "rss-speed":100000,
+      "rss-ttl":1800,
+      "rss-position":{
+        "Bottom-Left":9,
+        "Bottom":8,
+        "Right":2,
+        "Left":1,
+        "Top":4,
+        "Center":0,
+        "Bottom-Right":10,
+        "Top-Right":6,
+        "Top-Left":5
+      },
+      "rss-opacity":255,
+      "rss-size":-1,
+      "rss-title":{
+        "Scroll with feed":2,
+        "Don't show":0,
+        "Default":-1,
+        "Always visible":1
+      },
+      "rss-x":0,
+      "rss-images":true,
+      "rss-y":0,
+      "rss-color":"",
+      "rss-length":60
+    },
+    "name":"RSS / Atom",
+    "category":"Stream output",
+    "longtext":"RSS and Atom feed display",
+    "help":"Display a RSS or ATOM Feed on your video",
+    "capability":"sub source",
+    "subcategory":"Subtitles/OSD"
+  },
+  "79":{
+    "config":[],
+    "name":"stream_out_duplicate",
+    "category":"Subtitles codecs",
+    "longtext":"Duplicate stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "95":{
+    "config":{
+      "sout-standard-mux":"",
+      "sout-standard-sap":false,
+      "sout-standard-email":"",
+      "sout-standard-path":"",
+      "sout-standard-phone":"",
+      "sout-standard-url":"",
+      "sout-standard-name":"",
+      "sout-standard-bind":"",
+      "sout-standard-access":"",
+      "sout-standard-description":"",
+      "sout-standard-dst":"",
+      "sout-standard-group":""
+    },
+    "name":"Standard",
+    "category":"Stream output",
+    "longtext":"Standard stream output",
+    "capability":"sout stream",
+    "subcategory":"Sout stream"
+  },
+  "111":{
+    "config":{
+      "blur-factor":80
+    },
+    "name":"Motion blur",
+    "category":"Stream output",
+    "longtext":"Motion blur filter",
+    "capability":"video filter2",
+    "subcategory":"Filters"
+  },
+  "127":{
+    "config":{
+      "subsdelay-overlap":3,
+      "subsdelay-mode":{
+        "Relative to source content":2,
+        "Absolute delay":0,
+        "Relative to source delay":1
+      },
+      "subsdelay-min-start-stop":1000,
+      "subsdelay-min-stop-start":1000,
+      "subsdelay-factor":2,
+      "subsdelay-min-alpha":70,
+      "subsdelay-min-stops":1000
+    },
+    "name":"Subsdelay",
+    "category":"Stream output",
+    "longtext":"Subtitles delay",
+    "help":"Change subtitles delay",
+    "capability":"sub filter",
+    "subcategory":"Subtitles/OSD"
+  }
+}
