@@ -1,0 +1,166 @@
+From 7b9f306d0918120b618a19415039bf9ae6f93c05 Mon Sep 17 00:00:00 2001
+From: Francois Cartegnie <fcvlcdev@free.fr>
+Date: Tue, 10 Jan 2012 06:26:28 +0100
+Subject: [PATCH 1/2] lua: add modules description function
+
+---
+ modules/lua/libs/configuration.c |  129 ++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 129 insertions(+), 0 deletions(-)
+
+diff --git a/modules/lua/libs/configuration.c b/modules/lua/libs/configuration.c
+index 7a4785f..ecb04fa 100644
+--- a/modules/lua/libs/configuration.c
++++ b/modules/lua/libs/configuration.c
+@@ -33,6 +33,9 @@
+ #endif
+ 
+ #include <vlc_common.h>
++#include <vlc_modules.h>
++#include <vlc_configuration.h>
++#include <vlc_config_cat.h>
+ 
+ #include <lua.h>        /* Low level lua C API */
+ #include <lauxlib.h>    /* Higher level C API */
+@@ -40,6 +43,131 @@
+ #include "../vlc.h"
+ #include "../libs.h"
+ 
++#define _NNS(S) S?S:""
++static void push_item( lua_State *L, module_config_t * p_item )
++{
++    if ( p_item->psz_name )
++    {
++        lua_pushstring( L, p_item->psz_name );
++
++        switch( p_item->i_type )
++        {
++        case CONFIG_ITEM_BOOL:
++            lua_pushboolean( L, p_item->value.i );
++            break;
++        case CONFIG_ITEM_INTEGER:
++            if ( !p_item->i_list )
++            {
++                lua_pushinteger( L, p_item->value.i );
++            }
++            else
++            {
++                lua_createtable( L, 0, p_item->i_list );
++                for( int i=0 ; i< p_item->i_list ; i++ )
++                {
++                    lua_pushstring( L, _NNS(p_item->ppsz_list_text[i]) );
++                    lua_pushinteger( L, p_item->pi_list[i] );
++                    lua_settable( L, -3 );
++                }
++            }
++            break;
++            case CONFIG_ITEM_FLOAT:
++                lua_pushnumber( L, p_item->value.f );
++                break;
++            case CONFIG_ITEM_STRING:
++            case CONFIG_ITEM_PASSWORD:
++                if ( !p_item->i_list )
++                {
++                    lua_pushstring( L, p_item->value.psz );
++                }
++                else
++                {
++                    lua_createtable( L, 0, p_item->i_list );
++                    for( int i=0 ; i< p_item->i_list ; i++ )
++                    {
++                        if (p_item->ppsz_list_text)
++                            lua_pushstring( L, _NNS(p_item->ppsz_list_text[i]) );
++                        else
++                            lua_pushstring( L, _NNS(p_item->ppsz_list[i]) );
++                        lua_pushstring( L, _NNS(p_item->ppsz_list[i]) );
++                        lua_settable( L, -3 );
++                    }
++                }
++                break;
++            default:
++            lua_pushstring( L, "");
++        }
++        lua_settable( L, -3 );
++    }
++}
++
++static int vlclua_modules_desc( lua_State *L )
++{
++    vlc_object_t * p_this = vlclua_get_this( L );
++    module_t *p_module;
++    //assert( p_module );
++    size_t i_list;
++    module_t **p_list = module_list_get( & i_list );
++    lua_createtable( L, 0, i_list );
++    for ( int i=0; i< i_list; i++ )
++    {
++        p_module = p_list[i];
++        unsigned confsize;
++        int i_cat, i_subcat;
++        module_config_t *const p_config = module_config_get (p_module, &confsize),
++        *p_item = p_config,
++        *p_end = p_config + confsize;
++
++        if ( !module_is_main( p_module ) )
++        {
++            lua_pushinteger( L, i );
++            lua_createtable( L, 0, 4 );
++
++                lua_pushstring( L, "name" );
++                lua_pushstring( L, module_get_name( p_module, false ) );
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "capability" );
++                lua_pushstring( L, module_get_capability( p_module ) );
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "longtext" );
++                lua_pushstring( L, module_get_name( p_module, true ) );
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "help" );
++                lua_pushstring( L, module_get_help( p_module ) );
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "config" );
++                lua_createtable( L, 0, confsize );
++                while (p_item < p_end)
++                {
++                    push_item( L, p_item );
++                    p_item++;
++                    if ( p_item->i_type == CONFIG_CATEGORY )
++                        i_cat = p_item->value.i;
++                    if ( p_item->i_type == CONFIG_SUBCATEGORY )
++                        i_subcat = p_item->value.i;
++                }
++                msg_Dbg(p_this, "module: %s", module_get_name( p_module, true ));
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "category" );
++                lua_pushstring( L, config_CategoryNameGet( i_cat ) );
++                lua_settable( L, -3 );
++
++                lua_pushstring( L, "subcategory" );
++                lua_pushstring( L, config_CategoryNameGet( i_subcat ) );
++                lua_settable( L, -3 );
++
++            lua_settable( L, -3 );
++        }
++    }
++    module_list_free( p_list );
++    return 1;
++}
++
+ /*****************************************************************************
+  * Config handling
+  *****************************************************************************/
+@@ -111,6 +239,7 @@ static int vlclua_config_set( lua_State *L )
+ static const luaL_Reg vlclua_config_reg[] = {
+     { "get", vlclua_config_get },
+     { "set", vlclua_config_set },
++    { "modules", vlclua_modules_desc },
+     { NULL, NULL }
+ };
+ 
+-- 
+1.7.6
+

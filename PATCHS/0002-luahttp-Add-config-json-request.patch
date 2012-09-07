@@ -1,0 +1,56 @@
+From bd1548c5ea7a90afeb8e7465c424097f831ccc43 Mon Sep 17 00:00:00 2001
+From: Francois Cartegnie <fcvlcdev@free.fr>
+Date: Tue, 10 Jan 2012 06:27:20 +0100
+Subject: [PATCH 2/2] luahttp: Add config json request
+
+---
+ share/lua/http/requests/config.json |   37 +++++++++++++++++++++++++++++++++++
+ 1 files changed, 37 insertions(+), 0 deletions(-)
+ create mode 100644 share/lua/http/requests/config.json
+
+diff --git a/share/lua/http/requests/config.json b/share/lua/http/requests/config.json
+new file mode 100644
+index 0000000..bb1786c
+--- /dev/null
++++ b/share/lua/http/requests/config.json
+@@ -0,0 +1,37 @@
++<?vlc --[[
++vim:syntax=lua
++<!--  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >
++<  status.xml: VLC media player web interface
++<  this should mirror the content and function of status.json
++< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >
++<  Copyright (C) 2005-2009 the VideoLAN team
++<  $Id$
++<
++<  Authors: Rob Jonson <rob -at- hobbyistsoftware -dot- com>
++<
++<  This program is free software; you can redistribute it and/or modify
++<  it under the terms of the GNU General Public License as published by
++<  the Free Software Foundation; either version 2 of the License, or
++<  (at your option) any later version.
++<
++<  This program is distributed in the hope that it will be useful,
++<  but WITHOUT ANY WARRANTY; without even the implied warranty of
++<  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++<  GNU General Public License for more details.
++<
++<  You should have received a copy of the GNU General Public License
++<  along with this program; if not, write to the Free Software
++<  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
++< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
++]]?>
++<?vlc
++-- because dkjson number formating depends on this
++os.setlocale("C");
++
++--package.loaded.httprequests = nil --uncomment to debug changes
++require "httprequests"
++
++httprequests.printTableAsJson(vlc.config.modules())
++
++
++?>
+-- 
+1.7.6
+
